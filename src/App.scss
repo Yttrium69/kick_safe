@@ -11,9 +11,10 @@ $margin-top: 5rem;
 // colors
 $background: #ECEFF3;
 $blue: #3D57E2;
+$yellow: #FFE55E;
 $black: #32353C;
 $line_gray: #DCE1E8;
-$font_gray: #717A8C;
+$font_gray: #DEDEDE;
 $caution: #F53C3C;
 $input_background: #EFF2F4;
 
@@ -25,132 +26,230 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
 
 
 //components > fonts
-@mixin font_large($color: $black) {
-    color: $color;
-    font-family: 'Pretendard';
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
+
 
 @mixin font_default($color: $black) {
-    color: $color;
-    font-family: Pretendard;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 170.336%;
+  color: $color;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170.336%;
+}
+
+@mixin font_large($color: $black) {
+  color: $color;
+  font-family: 'Pretendard';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin font_huge($color: $black) {
+  color: $color;
+  font-family: 'Pretendard';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 @mixin font_bold($color) {
-    color: $color;
-    font-family: Pretendard;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 170.336%;
+  color: $color;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170.336%;
 }
 
 @mixin font_small($color: $black) {
-    color: $color;
-    font-family: Pretendard;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.02188rem;
-    line-height: 150%;
+  color: $color;
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02188rem;
+  line-height: 150%;
 }
 
 @mixin font_tiny($color) {
-    color: $color;
-    font-family: Pretendard;
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.01875rem;
+  color: $color;
+  font-family: Pretendard;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01875rem;
 }
 
 //components >> buttons
 @mixin btn_filled($color: $blue, $width: "hug") {
-    display: inline-flex;
-    height: 3.125rem;
-    padding: 0.9375rem 1.375rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    border-radius: 0.3125rem;
-    background-color: $blue;
-    border: none;
-    @include font_bold(#fff);
-    transition: 0.3s;
+  display: inline-flex;
+  height: 3.125rem;
+  padding: 0.9375rem 1.375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background-color: $blue;
+  border: none;
+  @include font_bold(#fff);
+  transition: 0.3s;
 
-    @if($width =="fill") {
-        display: flex;
-        width: 100%;
-    }
+  @if ($width =="fill") {
+    display: flex;
+    width: 100%;
+  }
 
-    &:hover {
-        cursor: pointer;
-        background-color: #576de9;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: #576de9;
+  }
 }
 
 @mixin btn_lined($color: $blue, $width: "hug") {
-    display: inline-flex;
-    height: 3.125rem;
-    padding: 0.9375rem 1.375rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    border-radius: 0.3125rem;
-    background-color: #fff;
-    border: 1px solid $blue;
-    @include font_default($blue);
-    transition: 0.3s;
+  display: inline-flex;
+  height: 3.125rem;
+  padding: 0.9375rem 1.375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  border: 1px solid $blue;
+  @include font_default($blue);
+  transition: 0.3s;
 
-    @if($width =="fill") {
-        display: flex;
-        width: 100%;
-    }
+  @if ($width =="fill") {
+    display: flex;
+    width: 100%;
+  }
 
-    &:hover {
-        cursor: pointer;
-        background-color: #edeff8;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: #edeff8;
+  }
 }
+
+@mixin padding-horizental() {
+  padding: 0 $page_padding;
+  box-sizing: border-box;
+}
+
+@mixin page() {
+  height: 100vh;
+  width: 100vw;
+  margin-top: $margin_top;
+  margin-bottom: $margin-top;
+  background-color: $background;
+  overflow: hidden;
+}
+
+.App {
+  // @include page();
+  position: relative;
+}
+
 
 html {
   font-size: $rem_unit;
 }
 
-*{
+
+* {
   font-family: 'Pretendard';
   margin: 0;
   padding: 0;
 }
 
 
-@mixin page(){
-  overflow-x: hidden;
-  width: 100vw;
-  margin-top: $margin_top;
-  margin-bottom: $margin-top;
-  background-color: $background;
-  padding: 0 $page_padding;
-  background-color: green;
-  
+.page_home {
+  padding-top: 0;
+  position: relative;
+
+  .sect_QR {
+    .video_container {
+      svg {
+        display: none;
+      }
+
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .QR_foreground {
+      position: fixed;
+      top: 0;
+      z-index: -1;
+    }
+
+    .texts_container {
+      color: white;
+      z-index: 1;
+      margin: auto;
+      margin-top: $margin-top;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      .title {
+        @include font_huge(white);
+      }
+
+      .dscript {
+        @include font_small($font_gray);
+      }
+    }
+  }
+
+  .sect_agree {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 16rem;
+    width: 100vw;
+    background-color: blue;
+    z-index: 100;
+
+    .sect_controller {
+
+    }
+
+    .sect_content {
+      background-color: white;
+      height: 15rem;
+
+    }
+  }
+
 }
 
-.App{
-    @include page();
+
+//caution 페이지에 대한 style을 여기에 추가해 주세요
+.page_caution{
+
 }
 
 
-.page_home{
-    background-color: gray;
+//riding 페이지에 대한 style을 여기에 추가해 주세요
+.page_riding{
+
+}
+
+
+
+.comp_nav{
+
 }

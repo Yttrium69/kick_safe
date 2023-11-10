@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+.App {
+  position: relative;
+}
+
 html {
   font-size: 16px;
 }
@@ -10,16 +14,68 @@ html {
   padding: 0;
 }
 
-.App {
-  overflow-x: hidden;
+.page_home {
+  padding-top: 0;
+  position: relative;
+  padding: 2rem;
+}
+.page_home .sect_QR .video_container {
+  position: absolute;
+  top: 0;
   width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.page_home .sect_QR .video_container svg {
+  display: none;
+}
+.page_home .sect_QR .QR_foreground {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.page_home .sect_QR .texts_container {
+  color: white;
+  z-index: 1;
+  margin: auto;
   margin-top: 5rem;
-  margin-bottom: 5rem;
-  background-color: #ECEFF3;
-  padding: 0 1.5rem;
-  background-color: green;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.page_home .sect_QR .texts_container .title {
+  color: white;
+  font-family: "Pretendard";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.page_home .sect_QR .texts_container .dscript {
+  color: #DEDEDE;
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02188rem;
+  line-height: 150%;
+}
+.page_home .sect_agree {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 16rem;
+  background-color: blue;
+  z-index: 100;
+}
+.page_home .sect_agree .sect_content {
+  background-color: white;
+  height: 15rem;
 }
 
-.page_home {
-  background-color: gray;
-}/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=App.css.map */

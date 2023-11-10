@@ -1,34 +1,45 @@
 import React from 'react';
 import {QrScanner} from "@yudiel/react-qr-scanner";
+import Tag from "../component/Tag";
 import '../App.scss'
 
-// interface video_style {
-// }
-//
-// const video_style: video_style = {
-//     padding: 0,
-//     "width": "100%",
-//     "height": "auto",
-//     top: "0",
-// };
-//
-
 function Home(): JSX.Element {
+    function is_checked_agree():boolean{
+        // 주의사항 2가지 check 되어있을 경우 True return, 아닐 경우 False return.
+        return true;
+    }
+    function unlock_kickboard():boolean{
+        //서버에 QR코드 데이터와 날씨 데이터 전송
+        //unlock 되었는지 전송받음
+        return true;
+    }
+    function start_riding():void{
+        //주의사항에 체크하지 않았을 경우 오류 메시지 띄운 후 return.
+        if(is_checked_agree() == false) {
+            window.alert("안전한 주행을 위해 주의사항을 확인하세요.");
+            return;
+        }
+        //서버에 데이터 전송 후 잠금 해제에 성공하였을 경우 주행 창으로 이동.
+        if(unlock_kickboard() == true){
+        window.alert("잠금이 해제되었습니다. 안전한 주행 되세요!");
+        window.location.href='/Riding';
+        }
+    }
     return (
         <div className="page_home">
             <div className="sect_QR">
                 <svg className="QR_foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" fill="none">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M375 0H0V812H375V0ZM260 262H116V406H260V262Z"
+                    <path fillRule="evenodd" clipRule="evenodd" d="M375 0H0V812H375V0ZM260 194H116V338H260V194Z"
                           fill="#0C0C0C" fillOpacity="0.8"/>
                     <path
-                        d="M3 815H0V818H3V815ZM378 815V818H381V815H378ZM119 265V262H116V265H119ZM263 265H266V262H263V265ZM119 409H116V412H119V409ZM263 409V412H266V409H263ZM3   812H3V818H378V812ZM375  268H263V262H119V268ZM122 409V265H116V409H122ZM263 406H119V412H263V406ZM260 265V409H266V265H260Z"
+                        d="M3   815H0V818H3V815ZM378 815V818H381V815H378ZM119 197V194H116V197H119ZM263 197H266V194H263V197ZM119 341H116V344H119V341ZM263 341V344H266V341H263ZM3   812H3V818H378V812ZM375 3V815H381V3H375ZM119 200H263V194H119V200ZM122 341V197H116V341H122ZM263 338H119V344H263V338ZM260 197V341H266V197H260Z"
                         fill="#FFE55E" mask="url(#path-1-outside-1_84_79)"/>
                 </svg>
                 <div className="video_container">
                    <QrScanner containerStyle={{width: "100%", height: "100%"}}
-                               videoStyle={{minWidth: "100%", minHeight: "100%"}} onError={() => {
-                        console.log("nono")
-                    }}></QrScanner>
+                               videoStyle={{minWidth: "100%", minHeight: "100%"}} onError={() => {console.log("nono")}}
+                              onDecode={start_riding}
+                   ></QrScanner>
                 </div>
                 <div className='texts_container'>
                     <div className='title'>대여하기</div>
@@ -36,8 +47,15 @@ function Home(): JSX.Element {
                 </div>
             </div>
             <div className="sect_agree">
-                <div className="sect_controller"></div>
-                <div className="sect_content"></div>
+                <div className="sect_controller">
+                    <div className="controller_line"></div>
+                </div>
+                <div className="sect_content">
+                    <div className="tag_container">
+                        <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
+                    </div>
+                    <div className="disrpt">안전한 주행을 위한 주의사항을 확인하세요.</div>
+                </div>
                 <div className="sect_btn">
                 </div>
             </div>

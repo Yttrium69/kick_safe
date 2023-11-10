@@ -155,6 +155,9 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
   position: relative;
 }
 
+body{
+  overflow: hidden;
+}
 
 html {
   font-size: $rem_unit;
@@ -198,7 +201,7 @@ html {
       color: white;
       z-index: 1;
       margin: auto;
-      margin-top: $margin-top;
+      margin-top: 3rem;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -218,19 +221,39 @@ html {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 16rem;
+    $sect_size: 15rem;
+    height: $sect_size;
+    $controller_size: 1.5rem;
     width: 100vw;
-    background-color: blue;
     z-index: 100;
 
     .sect_controller {
-
+      height: $controller_size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .controller_line{
+        width: 4rem;
+        height: 0.4rem;
+        background-color: #ACACAC;
+        border-radius: 10rem;
+      }
     }
 
     .sect_content {
       background-color: white;
-      height: 15rem;
-
+      border-radius: 1.125rem 1.125rem 0 0;
+      height: calc($sect_size - $controller_size);
+      padding: 1.75rem 1.5rem;
+      .tag_container{
+        display: flex;
+        justify-content: center;
+      }
+      .disrpt{
+        @include font_default($black);
+        text-align: center;
+        margin-top: 1rem;
+      }
     }
   }
 

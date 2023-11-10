@@ -4,6 +4,10 @@
   position: relative;
 }
 
+body {
+  overflow: hidden;
+}
+
 html {
   font-size: 16px;
 }
@@ -17,7 +21,6 @@ html {
 .page_home {
   padding-top: 0;
   position: relative;
-  padding: 2rem;
 }
 .page_home .sect_QR .video_container {
   position: absolute;
@@ -41,7 +44,7 @@ html {
   color: white;
   z-index: 1;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -69,13 +72,41 @@ html {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 16rem;
-  background-color: blue;
+  height: 15rem;
+  width: 100vw;
   z-index: 100;
+}
+.page_home .sect_agree .sect_controller {
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page_home .sect_agree .sect_controller .controller_line {
+  width: 4rem;
+  height: 0.4rem;
+  background-color: #ACACAC;
+  border-radius: 10rem;
 }
 .page_home .sect_agree .sect_content {
   background-color: white;
-  height: 15rem;
+  border-radius: 1.125rem 1.125rem 0 0;
+  height: 13.5rem;
+  padding: 1.75rem 1.5rem;
+}
+.page_home .sect_agree .sect_content .tag_container {
+  display: flex;
+  justify-content: center;
+}
+.page_home .sect_agree .sect_content .disrpt {
+  color: #32353C;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170.336%;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=App.css.map */

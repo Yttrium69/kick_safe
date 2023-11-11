@@ -11,6 +11,7 @@ $margin-top: 5rem;
 // colors
 $background: #ECEFF3;
 $blue: #3D57E2;
+$skyblue: #EFF5F9;
 $yellow: #FFE55E;
 $black: #32353C;
 $line_gray: #DCE1E8;
@@ -241,6 +242,7 @@ html {
     }
 
     .sect_content {
+      text-align: center;
       background-color: white;
       border-radius: 1.125rem 1.125rem 0 0;
       height: calc($sect_size - $controller_size);
@@ -255,19 +257,134 @@ html {
         margin-top: 1rem;
       }
     }
-  }
+    // Button
+    .comp_btn {
+      button {
+        margin: 4rem;
+        @include btn_filled($font_gray);
+        &:hover {
+          background-color: $yellow;
+        }
 
+        &.pressed {
+          @include btn_filled($yellow);
+          @include font_bold($black);
+          &:hover {
+            background-color: $yellow;
+          }
+        }
+      }
+
+      .btn_txt {
+        @include font_bold(#949BA4);
+      }
+    }
+  }
 }
 
 
 //caution 페이지에 대한 style을 여기에 추가해 주세요
-// App.scss
-
 .page_caution {
   text-align: center;
-  padding-top: 3.38rem;
+  margin-top: 3.38rem;
+  
+  .comp_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8125rem;
+    flex-shrink: 0;
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid $line_gray;
+    background: #FFF;
+
+    .title {
+      @include font_bold($black);
+    }
+  }
+  // Center contents
+  .body_container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .caution {
+      display: inline-flex;
+      padding: 0.25rem 1rem;
+      margin-top: 1.69rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      border-radius: 3.625rem;
+      background: #FDEDEA;
+    }
+
+    .check_list_container {
+      display: flex;
+      width: 20.4375rem;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+  
+      .contents {
+        display: flex;
+        width: 20.4375rem;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+  
+        border-radius: 0.3125rem;
+        background: $skyblue;
+  
+        .top {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          
+          .helmet_img {
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+          .title {
+            @include font_huge($black);
+          }
+        }
+  
+        .bottom {
+          @include font_default(#737C86);
+          text-align: left;
+        }
+      }
+
+      .btn_container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+      }
+
+    }
+  }
+  
+
 
   .comp_btn {
+    display: flex;
+    height: 5.1875rem;
+    padding: 0.5rem 0.625rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+
+    border-top: 1px solid $line_gray;
+    background: #FFF;
+
     button {
       @include btn_filled($font_gray);
       &:hover {

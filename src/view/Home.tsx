@@ -2,6 +2,7 @@ import React from 'react';
 import {QrScanner} from "@yudiel/react-qr-scanner";
 import Tag from "../component/Tag";
 import '../App.scss'
+import Button from '../component/Button';
 
 function Home(): JSX.Element {
     function is_checked_agree():boolean{
@@ -55,8 +56,9 @@ function Home(): JSX.Element {
                         <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                     </div>
                     <div className="disrpt">안전한 주행을 위한 주의사항을 확인하세요.</div>
-                </div>
-                <div className="sect_btn">
+                    <div className="sect_btn">
+                        <Button title="모든 주의사항을 확인했어요." type={{ is_error: true, is_activated: false }} />
+                    </div>
                 </div>
             </div>
         </div>

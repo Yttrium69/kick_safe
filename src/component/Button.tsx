@@ -16,10 +16,7 @@ function Button({ title, type }: btn_props): JSX.Element {
     const [isActivated, setIsActivated] = useState(type.is_activated);
 
     const handleClick = () => {
-        // Toggle the state when the button is clicked
         setIsActivated(!isActivated);
-
-        // Add additional logic here if needed
     };
 
     return (

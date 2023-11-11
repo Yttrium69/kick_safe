@@ -17,6 +17,7 @@ $black: #32353C;
 $line_gray: #DCE1E8;
 $font_gray: #DEDEDE;
 $caution: #F53C3C;
+$red:#F01111;
 $input_background: #EFF2F4;
 
 //lines
@@ -341,7 +342,6 @@ html {
 
     .check_list_container {
       display: flex;
-      width: 20.4375rem;
       padding: 1rem;
       flex-direction: column;
       align-items: flex-end;
@@ -377,51 +377,49 @@ html {
           text-align: left;
         }
       }
-
-      .btn_container {
+    }
+    .btn_container {
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+      width: 20.4375rem;
+      
+      .btn_box {
         display: flex;
-        flex-direction: row;
-        gap: 1rem;
         align-items: center;
+        gap: 1rem;
       }
-
     }
   }
   
 
+    // Button
+    .comp_btn {
+      border-top: 1px solid $line_gray;
+      background: #FFF;
 
-  .comp_btn {
-    display: flex;
-    height: 5.1875rem;
-    padding: 0.5rem 0.625rem;
-    margin-top: 10.06rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.625rem;
-    flex-shrink: 0;
-
-    border-top: 1px solid $line_gray;
-    background: #FFF;
-
-    button {
-      @include btn_filled($font_gray);
-      &:hover {
-        background-color: $yellow;
-      }
-
-      &.pressed {
-        @include btn_filled($yellow);
-        @include font_bold($black);
+      button {
+        margin: 0.5rem;
+        @include btn_filled($font_gray);
         &:hover {
           background-color: $yellow;
         }
+
+        &.pressed {
+          @include btn_filled($yellow);
+          @include font_bold($black);
+          &:hover {
+            background-color: $yellow;
+          }
+        }
+      }
+
+      .btn_txt {
+        @include font_bold(#949BA4);
       }
     }
-
-    .btn_txt {
-      @include font_bold(#949BA4);
-    }
-  }
 }
 
 
@@ -431,11 +429,94 @@ html {
 
 //riding 페이지에 대한 style을 여기에 추가해 주세요
 .page_riding{
+  text-align: center;
 
-}
+  .comp_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8125rem;
+    flex-shrink: 0;
+    padding-top: 3.38rem;
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid $line_gray;
+    background: #FFF;
+
+    .title {
+      @include font_large($black);
+    }
+  }
+
+  .mid_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      @include font_huge($black);
+      margin-top: 6.12rem;
+    }
+
+    .timer_container {
+      margin-top: 2.5rem;
+      width: 20.4375rem;
+      height: 7.3125rem;
+      flex-shrink: 0;
+
+      border-radius: 0.3125rem;
+      background: #EFF5F9;
+      
+      .timer_title {
+        margin-top: 1.31rem;
+        @include font_default(#737C86);
+      }
+      
+      .timer {
+        margin-top: 0.62rem;
+        @include font_huge($black);
+      }
+    }
+
+    .mid_dscrpt {
+      margin-top: 3rem;
+      margin-bottom: 15.31rem;
+      @include font_default($black);
+    }
+  }
 
 
+  // Center contents
+  .body_container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.comp_nav{
+  // Button
+  .comp_btn {
+    border-top: 1px solid $line_gray;
+    background: #FFF;
 
+    button {
+      margin: 0.5rem;
+      @include btn_filled($red);
+      &:hover {
+        background-color: $font_gray;
+      }
+
+      &.pressed {
+        @include btn_filled($font_gray);
+        @include font_bold($black);
+        &:hover {
+          background-color: $font_gray;
+        }
+      }
+    }
+
+    .btn_txt {
+      @include font_bold(white);
+    }
+  }
 }

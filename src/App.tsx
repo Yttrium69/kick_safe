@@ -1,6 +1,8 @@
 import React from 'react';
 import Home from './view/Home';
 import Caution from './view/Caution';
+import Riding from './view/Riding';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 
@@ -10,8 +12,8 @@ function App(): JSX.Element {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* src/view/Caution 함수 수정해 주세요 */}
           <Route path="/Caution" element={<Caution />} />
+          <Route path="/Riding" element={<Riding />} />
         </Routes>
       </div>
     </BrowserRouter>

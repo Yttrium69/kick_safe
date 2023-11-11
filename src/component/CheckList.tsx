@@ -1,7 +1,6 @@
 // CheckList.tsx
 import React, { FC } from 'react';
 import imgHelmet from '../images/img_helmet.png';
-import CircleButton from './CircleButton';
 
 interface CheckListProps {
     title: string;
@@ -18,13 +17,6 @@ const CheckList: FC<CheckListProps> = ({ title, description }) => {
             </div>
             <div className="bottom">{description}</div>
         </div>
-        
-            <div className="btn_container">
-                <div className="icon_checked">
-                    <CircleButton />
-                </div>
-                <div>확인했어요.</div>
-            </div>
     </div>
     );
 };

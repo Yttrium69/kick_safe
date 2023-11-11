@@ -42,7 +42,7 @@ function Home(): JSX.Element {
                 </svg>
                 <div className="video_container">
                    <QrScanner containerStyle={{width: "100%", height: "100%"}}
-                               videoStyle={{minWidth: "100%", minHeight: "100%"}} onError={() => {console.log("nono")}}
+                              videoStyle={{minWidth: "100%", minHeight: "100%"}} onError={() => {console.log("nono")}}
                               onDecode={start_riding}
                    ></QrScanner>
                 </div>

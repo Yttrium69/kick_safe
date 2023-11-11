@@ -12,9 +12,9 @@ interface btn_props {
     type: btn_type;
 }
 
+
 function Button({ title, type }: btn_props): JSX.Element {
     const [isActivated, setIsActivated] = useState(type.is_activated);
-
     const handleClick = () => {
         setIsActivated(!isActivated);
     };

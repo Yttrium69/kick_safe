@@ -177,22 +177,21 @@ html {
   padding-top: 0;
   position: relative;
 
-  .comp_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8125rem;
-    flex-shrink: 0;
-    padding-top: 3.38rem;
-    padding-bottom: 1.5rem;
+  // .comp_nav {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   gap: 0.8125rem;
+  //   flex-shrink: 0;
+  //   padding-top: 3.38rem;
+  //   padding-bottom: 1.5rem;
+  //   border-bottom: 1px solid $line_gray;
+  //   background: #FFF;
 
-    border-bottom: 1px solid $line_gray;
-    background: #FFF;
-
-    .title {
-      @include font_large($black);
-    }
-  }
+  //   .title {
+  //     @include font_large($black);
+  //   }
+  // }
 
   .sect_QR {
     .video_container {
@@ -220,7 +219,7 @@ html {
       color: white;
       z-index: 1;
       margin: auto;
-      margin-top: 3rem;
+      margin-top: 5rem;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -237,11 +236,11 @@ html {
   }
 
   .sect_agree {
+    $sect_size: 13rem;
     position: fixed;
     bottom: 0;
     left: 0;
-    $sect_size: 15rem;
-    height: $sect_size;
+    height: fit-content;
     $controller_size: 1.5rem;
     width: 100vw;
     z-index: 100;
@@ -270,32 +269,13 @@ html {
         justify-content: center;
       }
       .disrpt{
-        @include font_default($black);
+        @include font_small($black);
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
       }
     }
     // Button
-    .comp_btn {
-      button {
-        margin: 4rem;
-        @include btn_filled($font_gray);
-        &:hover {
-          background-color: $yellow;
-        }
-
-        &.pressed {
-          @include btn_filled($yellow);
-          @include font_bold($black);
-          &:hover {
-            background-color: $yellow;
-          }
-        }
-      }
-
-      .btn_txt {
-        @include font_bold(#949BA4);
-      }
+    .sect_btn {
     }
   }
 }
@@ -304,6 +284,7 @@ html {
 //caution 페이지에 대한 style을 여기에 추가해 주세요
 .page_caution {
   text-align: center;
+<<<<<<< HEAD
 
   .comp_nav {
     display: flex;
@@ -313,15 +294,27 @@ html {
     flex-shrink: 0;
     padding-top: 3.38rem;
     padding-bottom: 1.5rem;
+=======
+  
+  // .comp_nav {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   gap: 0.8125rem;
+  //   flex-shrink: 0;
+  //   padding-top: 3.38rem;
+  //   padding-bottom: 1.5rem;
+>>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
 
-    border-bottom: 1px solid $line_gray;
-    background: #FFF;
+  //   border-bottom: 1px solid $line_gray;
+  //   background: #FFF;
 
-    .title {
-      @include font_large($black);
-    }
-  }
+  //   .title {
+  //     @include font_large($black);
+  //   }
+  // }
   // Center contents
+<<<<<<< HEAD
   .body_container {
     display: flex;
     flex-direction: column;
@@ -334,22 +327,47 @@ html {
       justify-content: center;
       align-items: center;
       gap: 0.5rem;
+=======
+  .body_container
+  {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    width: 100%;
+    padding: 0 $page_padding 0 $page_padding;
+    box-sizing: border-box;
+>>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
 
-      border-radius: 3.625rem;
-      background: #FDEDEA;
+    .comp_tag{
+      margin: auto;
+      margin-top: 1.5rem;
     }
 
     .check_list_container {
       display: flex;
+<<<<<<< HEAD
       padding: 1rem;
       flex-direction: column;
       align-items: flex-end;
       gap: 0.5rem;
 
+=======
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1rem;
+  
+>>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
       .contents {
         display: flex;
-        width: 20.4375rem;
+        position: relative;
+        width: 100%;
+        flex-shrink: 1;
+        flex-grow: 1;
         padding: 1rem;
+        box-sizing: border-box;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
@@ -392,6 +410,7 @@ html {
       }
     }
   }
+<<<<<<< HEAD
 
     // Button
     .comp_btn {
@@ -505,4 +524,68 @@ html {
       @include font_bold(white);
     }
   }
+=======
+}
+
+
+.comp_btn{
+  position: fixed;
+  height: 5rem;
+  padding: 0.5rem $page_padding 0 $page_padding;
+  box-sizing: border-box;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+
+  button {
+    position: relative;
+    @include btn_filled($font_gray, "fill");
+    &:hover {
+      background-color: $yellow;
+    }
+
+    &.pressed {
+      @include btn_filled($yellow);
+      @include font_bold($black);
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+  }
+
+  .btn_txt {
+    @include font_bold(#949BA4);
+  }
+}
+
+
+
+
+//riding 페이지에 대한 style을 여기에 추가해 주세요
+.page_riding{
+
+}
+
+
+
+.comp_nav {
+
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 2.875rem;;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid $line_gray;
+  background: #FFF;
+
+  .title {
+    @include font_bold($black);
+  }
+>>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
 }

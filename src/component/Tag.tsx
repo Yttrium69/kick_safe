@@ -11,7 +11,7 @@ interface tag_props{
 
 function Tag(tag_props:tag_props): JSX.Element {
     const back_style:object = {
-        "padding": "0.4rem 1rem", backgroundColor:tag_props.background_color, borderRadius:"10rem", display:"inline-flex", columnGap:"0.5rem"
+        "padding": "0.4rem 1rem", backgroundColor:tag_props.background_color, borderRadius:"10rem", display:"inline-flex", columnGap:"0.5rem", width:"fit-content"
     }
     const font_style:object = {
         color: tag_props.font_color

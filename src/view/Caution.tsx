@@ -37,34 +37,32 @@ function Caution(): JSX.Element {
             </div>
 
             <div className="body_container">
-<<<<<<< HEAD
-                <Careful />
-                <CheckList
-                    title="헬멧은 필수!"
-                    description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
-                />
-                <div className="btn_container">
-                    <div className="btn_box">
-                        <CircleButton handleClick={handleCircleButton1Click} isActivated={isCircleButton1Activated} />
-                        <div className="">확인했어요.</div>
+                <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
+                <div className="check_option">
+                    <CheckList
+                        title="헬멧은 필수!"
+                        description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
+                    />
+                    <div className="btn_container">
+                        <div className="btn_box">
+                            <CircleButton handleClick={handleCircleButton1Click} isActivated={isCircleButton1Activated} />
+                            <div className="label">확인했어요.</div>
+                        </div>
                     </div>
                 </div>
 
-                <CheckList
-                    title="헬멧은 필수!"
-                    description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
-                />
-                <div className="btn_container">
-                    <div className="btn_box">
-                        <CircleButton handleClick={handleCircleButton2Click} isActivated={isCircleButton2Activated} />
-                        <div>확인했어요.</div>
+                <div className="check_option">
+                    <CheckList
+                        title="헬멧은 필수!"
+                        description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
+                    />
+                    <div className="btn_container">
+                        <div className="btn_box">
+                            <CircleButton handleClick={handleCircleButton1Click} isActivated={isCircleButton1Activated} />
+                            <div className="label">확인했어요.</div>
+                        </div>
                     </div>
                 </div>
-=======
-                <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
-                <CheckList title="헬멧은 필수!" description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요." />
-                <CheckList title="헬멧은 필수!" description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요." />
->>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
             </div>
 
             <div>

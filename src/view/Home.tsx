@@ -92,23 +92,18 @@ function Home(): JSX.Element {
                         fill="#FFE55E" mask="url(#path-1-outside-1_84_79)" />
                 </svg>
                 <div className="video_container">
-<<<<<<< HEAD
-                   <QrScanner containerStyle={{width: "100%", height: "100%"}}
-                              videoStyle={{minWidth: "100%", minHeight: "100%"}} onError={() => {console.log("nono")}}
-                              onDecode={start_riding}
-                   ></QrScanner>
-=======
+
                     <QrScanner containerStyle={{ width: "100%", height: "100%" }}
                         videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={() => { console.log("nono") }}
                         onDecode={start_riding}
                     ></QrScanner>
->>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
-                </div>
+
+                </div >
                 <div className='texts_container'>
                     <div className='title'>대여하기</div>
                     <div className='dscript'>킥보드 상단의 QR코드를 스캔하여<br />간편하게 대여하세요.</div>
                 </div>
-            </div>
+            </div >
             <div className="sect_agree">
                 <div style={{ cursor: "n-resize" }} className="sect_controller" onTouchStart={handleStart} onMouseDown={handleStart}>
                     <div className="controller_line"></div>
@@ -123,7 +118,7 @@ function Home(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

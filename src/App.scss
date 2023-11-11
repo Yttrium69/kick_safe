@@ -17,7 +17,6 @@ $black: #32353C;
 $line_gray: #DCE1E8;
 $font_gray: #DEDEDE;
 $caution: #F53C3C;
-$red:#F01111;
 $input_background: #EFF2F4;
 
 //lines
@@ -284,50 +283,6 @@ html {
 //caution 페이지에 대한 style을 여기에 추가해 주세요
 .page_caution {
   text-align: center;
-<<<<<<< HEAD
-
-  .comp_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8125rem;
-    flex-shrink: 0;
-    padding-top: 3.38rem;
-    padding-bottom: 1.5rem;
-=======
-  
-  // .comp_nav {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   gap: 0.8125rem;
-  //   flex-shrink: 0;
-  //   padding-top: 3.38rem;
-  //   padding-bottom: 1.5rem;
->>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
-
-  //   border-bottom: 1px solid $line_gray;
-  //   background: #FFF;
-
-  //   .title {
-  //     @include font_large($black);
-  //   }
-  // }
-  // Center contents
-<<<<<<< HEAD
-  .body_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .caution {
-      display: inline-flex;
-      padding: 0.25rem 1rem;
-      margin-top: 1.69rem;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-=======
   .body_container
   {
     margin-top: 3rem;
@@ -337,29 +292,20 @@ html {
     width: 100%;
     padding: 0 $page_padding 0 $page_padding;
     box-sizing: border-box;
->>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
 
     .comp_tag{
       margin: auto;
       margin-top: 1.5rem;
     }
 
-    .check_list_container {
+    .check_option {
       display: flex;
-<<<<<<< HEAD
-      padding: 1rem;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.5rem;
-
-=======
       flex-shrink: 1;
       flex-grow: 1;
       flex-direction: column;
       align-items: flex-end;
-      gap: 1rem;
+      gap: 0.8rem;
   
->>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
       .contents {
         display: flex;
         position: relative;
@@ -371,10 +317,10 @@ html {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
-
+  
         border-radius: 0.3125rem;
         background: $skyblue;
-
+  
         .top {
           display: flex;
           align-items: center;
@@ -388,143 +334,22 @@ html {
             @include font_large($black);
           }
         }
-
+  
         .bottom {
           @include font_default(#737C86);
           text-align: left;
         }
       }
     }
-    .btn_container {
+
+    .btn_box {
       display: flex;
-      padding: 1rem;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.5rem;
-      width: 20.4375rem;
-
-      .btn_box {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
+      flex-grow: 0;
+      justify-content: flex-end;
+      align-items: center;
+      column-gap: 1rem;
     }
   }
-<<<<<<< HEAD
-
-    // Button
-    .comp_btn {
-      border-top: 1px solid $line_gray;
-      margin-top: 10.06rem;
-      background: #FFF;
-
-      button {
-        margin: 0.5rem;
-        @include btn_filled($font_gray);
-        &:hover {
-          background-color: $yellow;
-        }
-
-        &.pressed {
-          @include btn_filled($yellow);
-          @include font_bold($black);
-          &:hover {
-            background-color: $yellow;
-          }
-        }
-      }
-
-      .btn_txt {
-        @include font_bold(#949BA4);
-      }
-    }
-}
-
-
-//riding 페이지에 대한 style을 여기에 추가해 주세요
-.page_riding {
-  text-align: center;
-
-  .comp_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8125rem;
-    flex-shrink: 0;
-    padding-top: 3.38rem;
-    padding-bottom: 1.5rem;
-
-    border-bottom: 1px solid $line_gray;
-    background: #FFF;
-
-    .title {
-      @include font_large($black);
-    }
-  }
-
-  .mid_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .title {
-      @include font_huge($black);
-      margin-top: 6.12rem;
-    }
-
-    .timer_container {
-      margin-top: 2.5rem;
-      width: 20.4375rem;
-      height: 7.3125rem;
-      flex-shrink: 0;
-
-      border-radius: 0.3125rem;
-      background: #EFF5F9;
-      
-      .timer_title {
-        margin-top: 1.31rem;
-        @include font_default(#737C86);
-      }
-      
-      .timer {
-        margin-top: 0.62rem;
-        @include font_huge($black);
-      }
-    }
-
-    .mid_dscrpt {
-      margin-top: 3rem;
-      margin-bottom: 15.31rem;
-      @include font_default($black);
-    }
-  }
-
-  // Button
-  .comp_btn {
-    border-top: 1px solid $line_gray;
-    background: #FFF;
-
-    button {
-      margin: 0.5rem;
-      @include btn_filled($red);
-      &:hover {
-        background-color: $font_gray;
-      }
-
-      &.pressed {
-        @include btn_filled($font_gray);
-        @include font_bold($black);
-        &:hover {
-          background-color: $font_gray;
-        }
-      }
-    }
-
-    .btn_txt {
-      @include font_bold(white);
-    }
-  }
-=======
 }
 
 
@@ -587,5 +412,4 @@ html {
   .title {
     @include font_bold($black);
   }
->>>>>>> 884712622e33e981ca3a224089ba27f9134b6788
 }

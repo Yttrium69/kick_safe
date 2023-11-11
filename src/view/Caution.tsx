@@ -60,7 +60,7 @@ function Caution(): JSX.Element {
                 </div>
             </div>
 
-            <div >
+            <div>
                 <Caution_Button
                     title="모든 주의사항을 확인했어요."
                     type={{ is_error: true, is_activated: false }}

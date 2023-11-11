@@ -176,6 +176,23 @@ html {
   padding-top: 0;
   position: relative;
 
+  .comp_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8125rem;
+    flex-shrink: 0;
+    padding-top: 3.38rem;
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid $line_gray;
+    background: #FFF;
+
+    .title {
+      @include font_large($black);
+    }
+  }
+
   .sect_QR {
     .video_container {
       svg {
@@ -286,7 +303,6 @@ html {
 //caution 페이지에 대한 style을 여기에 추가해 주세요
 .page_caution {
   text-align: center;
-  margin-top: 3.38rem;
   
   .comp_nav {
     display: flex;
@@ -294,13 +310,14 @@ html {
     align-items: center;
     gap: 0.8125rem;
     flex-shrink: 0;
+    padding-top: 3.38rem;
     padding-bottom: 1.5rem;
 
     border-bottom: 1px solid $line_gray;
     background: #FFF;
 
     .title {
-      @include font_bold($black);
+      @include font_large($black);
     }
   }
   // Center contents
@@ -351,7 +368,7 @@ html {
             height: 1.75rem;
           }
           .title {
-            @include font_huge($black);
+            @include font_large($black);
           }
         }
   
@@ -377,6 +394,7 @@ html {
     display: flex;
     height: 5.1875rem;
     padding: 0.5rem 0.625rem;
+    margin-top: 10.06rem;
     flex-direction: column;
     align-items: center;
     gap: 0.625rem;

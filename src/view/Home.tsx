@@ -2,6 +2,7 @@ import React from 'react';
 import {QrScanner} from "@yudiel/react-qr-scanner";
 import Tag from "../component/Tag";
 import '../App.scss'
+import Nav from '../component/Nav';
 import Button from '../component/Button';
 
 function Home(): JSX.Element {
@@ -28,6 +29,9 @@ function Home(): JSX.Element {
     }
     return (
         <div className="page_home">
+            <div>
+                <Nav nav_props={{ title: "킥세이프" }} />
+            </div>
             <div className="sect_QR">
                 <svg className="QR_foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M375 0H0V812H375V0ZM260 194H116V338H260V194Z"

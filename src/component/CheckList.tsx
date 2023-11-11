@@ -9,15 +9,13 @@ interface CheckListProps {
 
 const CheckList: FC<CheckListProps> = ({ title, description }) => {
     return (
-    <div className="check_list_container">
-        <div className="contents">
+        <div className="check_list_container">
             <div className="top">
                 <img className="helmet_img" src={imgHelmet} alt="Helmet" />
                 <div className="title">{title}</div>
             </div>
             <div className="bottom">{description}</div>
         </div>
-    </div>
     );
 };
 

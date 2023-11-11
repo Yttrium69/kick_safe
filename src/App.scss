@@ -152,12 +152,15 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
 }
 
 .App {
-  // @include page();
   position: relative;
 }
 
 body{
   overflow: hidden;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
 }
 
 html {
@@ -175,22 +178,6 @@ html {
 .page_home {
   padding-top: 0;
   position: relative;
-
-  // .comp_nav {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   gap: 0.8125rem;
-  //   flex-shrink: 0;
-  //   padding-top: 3.38rem;
-  //   padding-bottom: 1.5rem;
-  //   border-bottom: 1px solid $line_gray;
-  //   background: #FFF;
-
-  //   .title {
-  //     @include font_large($black);
-  //   }
-  // }
 
   .sect_QR {
     .video_container {
@@ -305,8 +292,9 @@ html {
       flex-direction: column;
       align-items: flex-end;
       gap: 0.8rem;
+
   
-      .contents {
+      .check_list_container {
         display: flex;
         position: relative;
         width: 100%;
@@ -351,7 +339,6 @@ html {
     }
   }
 }
-
 
 .comp_btn{
   position: fixed;

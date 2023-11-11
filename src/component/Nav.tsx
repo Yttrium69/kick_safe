@@ -1,14 +1,17 @@
+// Nav.tsx
 import React from 'react';
-import '../App.scss'
+import '../App.scss';
 
-interface nav_props{
-    title: string;
+interface NavProps {
+    nav_props: {
+        title: string;
+    };
 }
 
-function Nav(props:nav_props): JSX.Element {
+function Nav({ nav_props }: NavProps): JSX.Element {
     return (
         <div className="comp_nav">
-        
+            <div className="title">{nav_props.title}</div>
         </div>
     );
 }

@@ -95,7 +95,7 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
   gap: 0.5rem;
   flex-shrink: 0;
   border-radius: 0.3125rem;
-  background-color: $blue;
+  background-color: $color;
   border: none;
   @include font_bold(#fff);
   transition: 0.3s;
@@ -238,9 +238,37 @@ html {
 
 
 //caution 페이지에 대한 style을 여기에 추가해 주세요
-.page_caution{
+// App.scss
 
+.page_caution {
+  text-align: center;
+  padding-top: 3.38rem;
+
+  .comp_btn {
+    button {
+      @include btn_filled($font_gray);
+      &:hover {
+        background-color: $yellow;
+      }
+
+      &.pressed {
+        @include btn_filled($yellow);
+        @include font_bold($black);
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+    }
+
+    .btn_txt {
+      @include font_bold(#949BA4);
+    }
+  }
 }
+
+
+
+
 
 
 //riding 페이지에 대한 style을 여기에 추가해 주세요

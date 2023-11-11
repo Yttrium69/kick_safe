@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import Home from './view/Home';
 import Caution from './view/Caution';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

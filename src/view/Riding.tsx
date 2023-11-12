@@ -7,11 +7,11 @@ import Button from '../component/Button';
 const Riding: React.FC = () => {
     // Define your timer properties
     const timerProps = {
-      _hours: 1,
-      _minutes: 30,
-      seconds: 12,
+        _hours: 1,
+        _minutes: 30,
+        seconds: 12,
     };
-  
+
     return (
         <div className="page_riding">
             <div>
@@ -21,10 +21,10 @@ const Riding: React.FC = () => {
                 <Body title="주행중..." timerProps={timerProps} />
             </div>
             <div className="sect_btn">
-                <Button title="모든 주의사항을 확인했어요." type={{ is_error: true, is_activated: false }} />
+                <Button title="주행 완료" type={{ is_error: true, is_activated: false }} />
             </div>
-      </div>
+    </div>
     );
-  };
-  
-  export default Riding;
+};
+
+export default Riding;

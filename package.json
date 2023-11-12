@@ -49,5 +49,9 @@
     "@types/jquery": "^3.5.27",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0"
-  }
+  },
+  "description": "2023 메이커톤",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

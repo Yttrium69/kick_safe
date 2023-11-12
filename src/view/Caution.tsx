@@ -1,11 +1,11 @@
 // Caution.tsx
 import React, { useState } from 'react';
 import '../App.scss';
+import Icon_X from '../images/icon_x.svg';
 import Nav from '../component/Nav';
 import Caution_Button from '../component/Caution_Button';
 import CheckList from '../component/CheckList';
 import Tag from '../component/Tag'
-import Careful from '../component/Careful';
 import CircleButton from '../component/CircleButton';
 
 function Caution(): JSX.Element {
@@ -26,14 +26,21 @@ function Caution(): JSX.Element {
     }, [isCircleButton1Activated, isCircleButton2Activated]);
 
     const handleCautionButtonClick = () => {
-        // You can perform additional actions here if needed
-        console.log("Caution_Button clicked!");
+        if (isCircleButton1Activated && isCircleButton2Activated)
+        {
+            window.location.href = "/Riding";
+        }
     };
+
+    const goToHome = () => {
+        window.location.href = "/";
+    }
 
     return (
         <div className="page_caution">
-            <div>
-                <Nav nav_props={{ title: "킥세이프" }} />
+            <div className="nav_container">
+                <div className="nav"><Nav nav_props={{ title: "킥세이프" }} /></div>
+                <div className="icon"><img src={Icon_X} alt="icon X" onClick={goToHome} /></div>
             </div>
 
             <div className="body_container">
@@ -58,7 +65,7 @@ function Caution(): JSX.Element {
                     />
                     <div className="btn_container">
                         <div className="btn_box">
-                            <CircleButton handleClick={handleCircleButton1Click} isActivated={isCircleButton1Activated} />
+                            <CircleButton handleClick={handleCircleButton2Click} isActivated={isCircleButton2Activated} />
                             <div className="label">확인했어요.</div>
                         </div>
                     </div>

@@ -7,8 +7,11 @@ import Caution_Button from '../component/Caution_Button';
 import CheckList from '../component/CheckList';
 import Tag from '../component/Tag'
 import CircleButton from '../component/CircleButton';
+import { useNavigate } from 'react-router-dom';
 
 function Caution(): JSX.Element {
+    const navigate = useNavigate();
+
     const [isButtonActivated, setIsButtonActivated] = useState(false);
     const [isCircleButton1Activated, setIsCircleButton1Activated] = useState(false);
     const [isCircleButton2Activated, setIsCircleButton2Activated] = useState(false);
@@ -33,7 +36,13 @@ function Caution(): JSX.Element {
     };
 
     const goToHome = () => {
-        window.location.href = "/";
+        // window.location.href = "/";
+        navigate('/', {
+            state: {
+                buttonState: isButtonActivated,
+            },
+        });
+        console.log(isButtonActivated);
     }
 
     return (

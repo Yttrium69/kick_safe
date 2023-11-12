@@ -1,3 +1,4 @@
+// Home.tsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { QrScanner } from "@yudiel/react-qr-scanner";
 import Tag from "../component/Tag";
@@ -6,10 +7,15 @@ import Nav from '../component/Nav';
 import Button from '../component/Button';
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
+import { useLocation } from 'react-router-dom';
+import Caution_Button from "../component/Caution_Button";
 
 interface jquery_node { };
 
 function Home(): JSX.Element {
+    const location = useLocation();
+    const buttonState = Boolean(location.state.buttonState);
+
     function is_checked_agree(): boolean {
         // 주의사항 2가지 check 되어있을 경우 True return, 아닐 경우 False return.
         return true;
@@ -77,6 +83,13 @@ function Home(): JSX.Element {
         document.addEventListener('touchend', handleMouseUp);
     }, [agree_height]);
 
+    const handleCautionButtonClick = () => {
+        if (buttonState === true)
+        {
+            window.location.href = "/Riding";
+        }
+    };
+
 
     return (
         <div className="page_home">
@@ -114,7 +127,12 @@ function Home(): JSX.Element {
                     </div>
                     <div className="disrpt">안전한 주행을 위한 주의사항을 확인하세요.</div>
                     <div className="sect_btn">
-                        <Button title="모든 주의사항을 확인했어요." type={{ is_error: true, is_activated: false }} />
+                        <Caution_Button
+                            title="모든 주의사항을 확인했어요."
+                            type={{ is_error: true, is_activated: false }}
+                            isButtonActivated={buttonState}
+                            onClick={handleCautionButtonClick}
+                        />
                     </div>
                 </div>
             </div>

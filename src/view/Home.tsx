@@ -14,7 +14,8 @@ interface jquery_node { };
 
 function Home(): JSX.Element {
     const location = useLocation();
-    const buttonState = Boolean(location.state.buttonState);
+    const buttonState = location.state?.buttonState; // Optional chaining to handle potential undefined
+    const isButtonActivated = buttonState !== undefined ? Boolean(buttonState) : false;
 
     function is_checked_agree(): boolean {
         // 주의사항 2가지 check 되어있을 경우 True return, 아닐 경우 False return.

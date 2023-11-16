@@ -29,9 +29,8 @@ function Caution(): JSX.Element {
     }, [isCircleButton1Activated, isCircleButton2Activated]);
 
     const handleCautionButtonClick = () => {
-        if (isCircleButton1Activated && isCircleButton2Activated)
-        {
-            window.location.href = "/Riding";
+        if (isCircleButton1Activated && isCircleButton2Activated) {
+            window.location.href = "/";
         }
     };
 
@@ -47,10 +46,12 @@ function Caution(): JSX.Element {
 
     return (
         <div className="page_caution">
-            <div className="nav_container">
-                <div className="nav"><Nav nav_props={{ title: "킥세이프" }} /></div>
+            {/* <div className="nav_container">
+                <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x:true  }} /></div>
                 <div className="icon"><img src={Icon_X} alt="icon X" onClick={goToHome} /></div>
-            </div>
+            </div> */}
+            {/* <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, }} /></div> */}
+            <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, }} /></div>
 
             <div className="body_container">
                 <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
@@ -86,7 +87,7 @@ function Caution(): JSX.Element {
                     title="모든 주의사항을 확인했어요."
                     type={{ is_error: true, is_activated: false }}
                     isButtonActivated={isButtonActivated}
-                    onClick={handleCautionButtonClick}
+                    onClick={goToHome}
                 />
             </div>
         </div>

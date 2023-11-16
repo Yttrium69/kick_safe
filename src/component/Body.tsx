@@ -21,7 +21,7 @@ const Body: React.FC<BodyProps> = ({ title, timerProps }) => {
                     <Timer initialHours={0} initialMinutes={0} initialSeconds={0} className="timer" />
                 </div>
             </div>
-            <div className="mid_dscrpt">안전하고 즐거운 시간 보내세요!</div>
+            <div className="mid_dscrpt">안전하고 즐거운 시간<br />보내세요!</div>
         </div>
     );
 };

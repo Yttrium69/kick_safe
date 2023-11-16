@@ -85,8 +85,7 @@ function Home(): JSX.Element {
     }, [agree_height]);
 
     const handleCautionButtonClick = () => {
-        if (buttonState === true)
-        {
+        if (buttonState === true) {
             window.location.href = "/Riding";
         }
     };
@@ -94,8 +93,8 @@ function Home(): JSX.Element {
 
     return (
         <div className="page_home">
-            <div>
-                <Nav nav_props={{ title: "킥세이프" }} />
+            <div className='nav_container'>
+                <Nav nav_props={{ title: "킥세이프", show_x: false }} />
             </div>
             <div className="sect_QR">
                 <svg className="QR_foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" fill="none">
@@ -122,7 +121,7 @@ function Home(): JSX.Element {
                 <div style={{ cursor: "n-resize" }} className="sect_controller" onTouchStart={handleStart} onMouseDown={handleStart}>
                     <div className="controller_line"></div>
                 </div>
-                <div style={{ height: `${agree_height}px` }} className="sect_content">
+                <div onClick={() => { move_page("/Caution") }} style={{ height: `${agree_height}px` }} className="sect_content">
                     <div className="tag_container">
                         <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                     </div>

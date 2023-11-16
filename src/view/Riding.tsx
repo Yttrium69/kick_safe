@@ -15,7 +15,7 @@ const Riding: React.FC = () => {
     return (
         <div className="page_riding">
             <div>
-                <Nav nav_props={{ title: "킥세이프" }} />
+                <Nav nav_props={{ title: "킥세이프", show_x: false }} />
             </div>
             <div>
                 <Body title="주행중..." timerProps={timerProps} />
@@ -23,7 +23,7 @@ const Riding: React.FC = () => {
             <div className="sect_btn">
                 <Button title="주행 완료" type={{ is_error: true, is_activated: false }} />
             </div>
-    </div>
+        </div>
     );
 };
 

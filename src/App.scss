@@ -180,23 +180,6 @@ html {
   padding-top: 0;
   position: relative;
 
-  .comp_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8125rem;
-    flex-shrink: 0;
-    padding-top: 3.38rem;
-    padding-bottom: 1.5rem;
-
-    border-bottom: 1px solid $line_gray;
-    background: #FFF;
-
-    .title {
-      @include font_large($black);
-    }
-  }
-
   .sect_QR {
     .video_container {
       svg {
@@ -287,43 +270,6 @@ Caution Page
 .page_caution {
   text-align: center;
 
-  .nav_container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* 중간에 네비게이션을 두고 나머지 공간을 양쪽에 분배합니다 */
-    padding-top: 3.38rem;
-    padding-bottom: 1.5rem;
-  
-    .nav {
-      display: flex;
-      align-items: center; /* 중앙 정렬을 위해 추가 */
-      justify-content: center; /* 좌우 중앙 정렬을 위해 추가 */
-      flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
-      margin-left: 2rem;
-  
-      .comp_nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-shrink: 0;
-  
-        .title {
-          @include font_large($black);
-        }
-      }
-    }
-  
-    .icon {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center; /* 중앙 정렬을 위해 추가 */
-      margin-right: 1.01rem;
-      width: 1rem;
-      height: 1rem;
-      flex-shrink: 0;
-    }
-  }
   
   .body_container {
     margin-top: 3rem;
@@ -390,9 +336,111 @@ Caution Page
       justify-content: flex-end;
       align-items: center;
       column-gap: 1rem;
+       .toggle-button {
+        cursor: pointer;
+       }
     }
   }
 }
+
+
+//riding 페이지에 대한 style을 여기에 추가해 주세요
+.page_riding{
+  text-align: center;
+  padding: 0 $page_padding 0 $page_padding;
+
+
+  .mid_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      @include font_huge($black);
+      margin-top: 6.12rem;
+    }
+
+    .timer_container {
+      margin-top: 2.5rem;
+      width: 20.4375rem;
+      height: 7.3125rem;
+      flex-shrink: 0;
+
+      border-radius: 0.3125rem;
+      background: #EFF5F9;
+      width: 100%;
+      
+      .timer_title {
+        margin-top: 1.31rem;
+        @include font_default(#737C86);
+      }
+      
+      .timer {
+        margin-top: 0.62rem;
+        @include font_huge($black);
+      }
+    }
+
+    .mid_dscrpt {
+      margin-top: 3rem;
+      margin-bottom: 15.31rem;
+      @include font_default($black);
+    }
+  }
+
+  // Button
+  // .comp_btn {
+  //   border-top: 1px solid $line_gray;
+  //   background: #FFF;
+
+  //   button {
+  //     margin: 0.5rem;
+  //     @include btn_filled($red);
+  //     // &:hover {
+  //     //   background-color: $font_gray;
+  //     // }
+
+  //     &.pressed {
+  //       @include btn_filled($font_gray);
+  //       @include font_bold($black);
+  //       // &:hover {
+  //       //   background-color: $font_gray;
+  //       // }
+  //     }
+  //   }
+
+  //   .btn_txt {
+  //     @include font_bold(white);
+  //   }
+  // }
+}
+
+
+.comp_nav{
+  position: fixed;
+  width: 100vw;
+  height: 3rem;
+  background-color: white;
+  @include font_bold($black);
+  text-align: center;
+  line-height: 3rem;
+  top: 0;
+  left: 0;
+  .icon_container{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
 
 .comp_btn{
   position: fixed;
@@ -418,95 +466,3 @@ Caution Page
     @include font_bold(#949BA4);
   }
 }
-
-
-
-
-//riding 페이지에 대한 style을 여기에 추가해 주세요
-.page_riding{
-  text-align: center;
-
-  .comp_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8125rem;
-    flex-shrink: 0;
-    padding-top: 3.38rem;
-    padding-bottom: 1.5rem;
-
-    border-bottom: 1px solid $line_gray;
-    background: #FFF;
-
-    .title {
-      @include font_large($black);
-    }
-  }
-
-  .mid_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .title {
-      @include font_huge($black);
-      margin-top: 6.12rem;
-    }
-
-    .timer_container {
-      margin-top: 2.5rem;
-      width: 20.4375rem;
-      height: 7.3125rem;
-      flex-shrink: 0;
-
-      border-radius: 0.3125rem;
-      background: #EFF5F9;
-      
-      .timer_title {
-        margin-top: 1.31rem;
-        @include font_default(#737C86);
-      }
-      
-      .timer {
-        margin-top: 0.62rem;
-        @include font_huge($black);
-      }
-    }
-
-    .mid_dscrpt {
-      margin-top: 3rem;
-      margin-bottom: 15.31rem;
-      @include font_default($black);
-    }
-  }
-
-  // Button
-  .comp_btn {
-    border-top: 1px solid $line_gray;
-    background: #FFF;
-
-    button {
-      margin: 0.5rem;
-      @include btn_filled($red);
-      // &:hover {
-      //   background-color: $font_gray;
-      // }
-
-      &.pressed {
-        @include btn_filled($font_gray);
-        @include font_bold($black);
-        // &:hover {
-        //   background-color: $font_gray;
-        // }
-      }
-    }
-
-    .btn_txt {
-      @include font_bold(white);
-    }
-  }
-}
-
-
-
-

@@ -18,10 +18,15 @@ function Button({ title, type }: btn_props): JSX.Element {
     const handleClick = () => {
         setIsActivated(!isActivated);
     };
+    let btn_style: object = {};
+
+    if (type.is_error == true) {
+        btn_style = { "backgroundColor": "#F01111", "color": "white" }
+    }
 
     return (
         <div className="comp_btn">
-            <button className={`btn_txt ${isActivated ? 'pressed' : ''}`} onClick={handleClick}>
+            <button style={btn_style} className={`btn_txt ${isActivated ? 'pressed' : ''}`} onClick={handleClick}>
                 {title}
             </button>
         </div>

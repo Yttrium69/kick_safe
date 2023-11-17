@@ -4,11 +4,12 @@ import { QrScanner } from "@yudiel/react-qr-scanner";
 import Tag from "../component/Tag";
 import '../App.scss'
 import Nav from '../component/Nav';
-import Button from '../component/Button';
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import { useLocation } from 'react-router-dom';
 import Caution_Button from "../component/Caution_Button";
+import Modal from 'react-modal';
+
 
 interface jquery_node { };
 
@@ -88,6 +89,9 @@ function Home(): JSX.Element {
         if (buttonState === true) {
             window.location.href = "/Riding";
         }
+        else {
+            window.alert("주의사항을 확인해 주세요.");
+        }
     };
 
 
@@ -121,7 +125,7 @@ function Home(): JSX.Element {
                 <div style={{ cursor: "n-resize" }} className="sect_controller" onTouchStart={handleStart} onMouseDown={handleStart}>
                     <div className="controller_line"></div>
                 </div>
-                <div onClick={() => { move_page("/Caution") }} style={{ height: `${agree_height}px` }} className="sect_content">
+                <div style={{ height: `${agree_height}px` }} className="sect_content">
                     <div className="tag_container">
                         <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                     </div>

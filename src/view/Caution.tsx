@@ -51,7 +51,7 @@ function Caution(): JSX.Element {
                 <div className="icon"><img src={Icon_X} alt="icon X" onClick={goToHome} /></div>
             </div> */}
             {/* <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, }} /></div> */}
-            <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, }} /></div>
+            <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, show_logo: false}} /></div>
 
             <div className="body_container">
                 <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>

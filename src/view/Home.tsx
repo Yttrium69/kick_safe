@@ -6,8 +6,8 @@ import '../App.scss'
 import Nav from '../component/Nav';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
-import $ from "jquery";
 import Button from "../component/Button";
+import $ from "jquery";
 
 interface jquery_node { };
 
@@ -84,7 +84,6 @@ function Home(): JSX.Element {
     }, [agree_height]);
 
     const handleCautionButtonClick = () => {
-        console.log(buttonState);
         if (buttonState != true) {
             window.location.href = "/Caution";
         }
@@ -99,7 +98,7 @@ function Home(): JSX.Element {
     return (
         <div className="page_home">
             <div className='nav_container'>
-                <Nav nav_props={{ title: "킥세이프", show_x: false }} />
+                <Nav nav_props={{ title: "킥세이프", show_x: false, show_logo: true}} />
             </div>
             <div className={`black_cover ${buttonState ? 'hide' : ''}`}></div>
 

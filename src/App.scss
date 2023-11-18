@@ -484,10 +484,10 @@ Caution Page
   height: 3rem;
   background-color: white;
   @include font_bold($black);
-  text-align: center;
   line-height: 3rem;
   top: 0;
   left: 0;
+
   .icon_container{
     position: absolute;
     right: 1rem;
@@ -498,6 +498,16 @@ Caution Page
     img{
       width: 100%;
       height: 100%;
+    }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    .logo_title {
+      margin-left: 0.5rem;
     }
   }
 }

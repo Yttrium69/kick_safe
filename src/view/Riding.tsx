@@ -20,7 +20,7 @@ const Riding: React.FC = () => {
     return (
         <div className="page_riding">
             <div>
-                <Nav nav_props={{ title: "킥세이프", show_x: false }} />
+                <Nav nav_props={{ title: "킥세이프", show_x: false, show_logo: true}} />
             </div>
             <div>
                 <Body title="주행중..." timerProps={timerProps} />

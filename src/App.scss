@@ -202,8 +202,8 @@ html {
         opacity: 0.9;
       }
       100% {
-        transform: translate(0, 2rem);
-        transform: translateY(20rem);
+        transform: translate(0, 0.1rem);
+        transform: translateY(25rem);
         opacity: 0;
       }
     }
@@ -393,7 +393,7 @@ Caution Page
 
   
         border-radius: 0.3125rem;
-        background: $skyblue;
+        background: #F4F4F4;
 
         flex-grow: 0;
   
@@ -479,7 +479,7 @@ Caution Page
       flex-shrink: 0;
 
       border-radius: 0.3125rem;
-      background: #EFF5F9;
+      background: #F4F4F4;
       width: 100%;
       
       .timer_title {

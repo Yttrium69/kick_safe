@@ -89,7 +89,7 @@ function Caution(): JSX.Element {
                 </div>
 
                 {/* <div className="check_option">
-
+                    //checklist 3
                     <CheckList
                         title="끝나고 주차는 확실하게!"
                         description="이후 이용하는 사용자를 위해 지정된 위치에 주차를 해주세요."

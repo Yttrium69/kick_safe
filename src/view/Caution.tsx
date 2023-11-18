@@ -45,7 +45,7 @@ function Caution(): JSX.Element {
     return (
         <div className="page_caution">
             {/* Header */}
-            <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, show_logo: false}} /></div>
+            <div className="nav"><Nav nav_props={{ title: "주의사항", show_x: true, show_logo: false}} /></div>
             {/* Body */}
             <div className="body_container">
                 <Tag img_src={Caution_icon} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>

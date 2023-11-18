@@ -19,6 +19,8 @@ interface QrResult {
 
 function Home(): JSX.Element {
     const location = useLocation();
+    let request = new XMLHttpRequest();
+
     const buttonState = location.state?.buttonState; // Optional chaining to handle potential undefined
     const [BottomMoving, isBottomMoving] = useState(false);
 
@@ -104,10 +106,15 @@ function Home(): JSX.Element {
                 window.alert("주의사항을 확인해주세요.");
             }
       };
-      
+
       const on_QR_successed = (target: string) => {
         const parsedTarget: QrResult = JSON.parse(target);
             if (parsedTarget.ok === true) {
+                request.open('POST', 'http://localhost:9999', true);
+                request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+                
+                var dataToSend = JSON.stringify({"key": "value"}); // Replace this with your actual data
+                request.send(dataToSend);
                 move_page('/Riding');
             }
       };

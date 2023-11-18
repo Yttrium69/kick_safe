@@ -110,11 +110,18 @@ function Home(): JSX.Element {
       const on_QR_successed = (target: string) => {
         const parsedTarget: QrResult = JSON.parse(target);
             if (parsedTarget.ok === true) {
-                request.open('POST', 'http://localhost:9999', true);
-                request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+                try {
+                    request.open('POST', 'http://10.5.11.221:9999', true);
+                    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    
+                    let dataToSend = JSON.stringify({"key": "value"}); // Replace this with your actual data
+                    request.send(dataToSend);
+                    console.log(dataToSend);
+                }
+                catch (error) {
+                    console.log(error);
+                }
                 
-                var dataToSend = JSON.stringify({"key": "value"}); // Replace this with your actual data
-                request.send(dataToSend);
                 move_page('/Riding');
             }
       };

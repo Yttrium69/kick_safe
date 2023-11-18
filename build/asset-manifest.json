@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b4aedd3.css",
-    "main.js": "/static/js/main.3d5a05d8.js",
+    "main.css": "/static/css/main.94690c51.css",
+    "main.js": "/static/js/main.f05c22aa.js",
     "static/js/988.7bc77449.chunk.js": "/static/js/988.7bc77449.chunk.js",
+    "static/media/parkbogum.png": "/static/media/parkbogum.4f8f45d0e0745894867e.png",
+    "static/media/gosu.png": "/static/media/gosu.26b705143c9bd4ef435e.png",
+    "static/media/jangoneyoung.png": "/static/media/jangoneyoung.f140ea7ec6a2412d6c20.png",
+    "static/media/sana_img.png": "/static/media/sana_img.6592b3df4f2cb5993712.png",
+    "static/media/sonaun.png": "/static/media/sonaun.8526f583cedab50190d8.png",
+    "static/media/dlwlrma.png": "/static/media/dlwlrma.b1549c4213e924fb634f.png",
+    "static/media/chaunu.png": "/static/media/chaunu.eabb5a01ea0363f0dcdc.png",
+    "static/media/onebin.png": "/static/media/onebin.8215b9017780b54949d6.png",
     "static/media/rain_icon.png": "/static/media/rain_icon.4645827d90e35b5d3646.png",
     "static/media/logo_type2.svg": "/static/media/logo_type2.45c934f14179409770864c314084ab98.svg",
     "index.html": "/index.html",
     "static/media/icon_caution.svg": "/static/media/icon_caution.b2199639040d61c062bf080814cda327.svg",
     "static/media/icon_x.svg": "/static/media/icon_x.b003998af307b18c3a26b35e14dc2367.svg",
-    "main.3b4aedd3.css.map": "/static/css/main.3b4aedd3.css.map",
-    "main.3d5a05d8.js.map": "/static/js/main.3d5a05d8.js.map",
+    "main.94690c51.css.map": "/static/css/main.94690c51.css.map",
+    "main.f05c22aa.js.map": "/static/js/main.f05c22aa.js.map",
     "988.7bc77449.chunk.js.map": "/static/js/988.7bc77449.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b4aedd3.css",
-    "static/js/main.3d5a05d8.js"
+    "static/css/main.94690c51.css",
+    "static/js/main.f05c22aa.js"
   ]
 }

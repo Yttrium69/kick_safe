@@ -1,7 +1,7 @@
 // Caution.tsx
 import React, { useState } from 'react';
 import '../App.scss';
-import Icon_X from '../images/icon_x.svg';
+// import Icon_X from '../images/icon_x.svg';
 import Nav from '../component/Nav';
 import Button from '../component/Button';
 import CheckList from '../component/CheckList';
@@ -13,56 +13,48 @@ function Caution(): JSX.Element {
     const navigate = useNavigate();
 
     const [isButtonActivated, setIsButtonActivated] = useState(false);
-    const [isCircleButton1Activated, setIsCircleButton1Activated] = useState(false);
-    const [isCircleButton2Activated, setIsCircleButton2Activated] = useState(false);
+    const [CheckButton_1, setCheckButton_1] = useState(false);
+    const [CheckButton_2, setCheckButton_2] = useState(false);
+    const [CheckButton_3, setCheckButton_3] = useState(false);
 
-    const handleCircleButton1Click = () => {
-        setIsCircleButton1Activated(!isCircleButton1Activated);
+    const handleCheckButton_1 = () => {
+        setCheckButton_1(!CheckButton_1);
     };
 
-    const handleCircleButton2Click = () => {
-        setIsCircleButton2Activated(!isCircleButton2Activated);
+    const handleCheckButton_2 = () => {
+        setCheckButton_2(!CheckButton_2);
+    };
+
+    const handleCheckButton_3 = () => {
+        setCheckButton_3(!CheckButton_3);
     };
 
     React.useEffect(() => {
-        setIsButtonActivated(isCircleButton1Activated && isCircleButton2Activated);
-    }, [isCircleButton1Activated, isCircleButton2Activated]);
+        setIsButtonActivated(CheckButton_1 && CheckButton_2 && CheckButton_3);
+    }, [CheckButton_1, CheckButton_2, CheckButton_3]);
 
-    const handleCautionButtonClick = () => {
-        if (isCircleButton1Activated && isCircleButton2Activated) {
-            window.location.href = "/";
-        }
-    };
-
-    const goToHome = () => {
-        // window.location.href = "/";
+    const goBackHome = () => {
         navigate('/', {
             state: {
                 buttonState: isButtonActivated,
             },
         });
-        // console.log(isButtonActivated);
     }
 
     return (
         <div className="page_caution">
-            {/* <div className="nav_container">
-                <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x:true  }} /></div>
-                <div className="icon"><img src={Icon_X} alt="icon X" onClick={goToHome} /></div>
-            </div> */}
-            {/* <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, }} /></div> */}
             <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, show_logo: false}} /></div>
 
             <div className="body_container">
                 <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                 <div className="check_option">
                     <CheckList
-                        title="헬멧은 필수!"
+                        title="킥보드는 혼자서!"
                         description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
                     />
                     <div className="btn_container">
                         <div className="btn_box">
-                            <CircleButton handleClick={handleCircleButton1Click} isActivated={isCircleButton1Activated} />
+                            <CircleButton handleClick={handleCheckButton_1} isActivated={CheckButton_1} />
                             <div className="label">확인했어요.</div>
                         </div>
                     </div>
@@ -75,7 +67,20 @@ function Caution(): JSX.Element {
                     />
                     <div className="btn_container">
                         <div className="btn_box">
-                            <CircleButton handleClick={handleCircleButton2Click} isActivated={isCircleButton2Activated} />
+                            <CircleButton handleClick={handleCheckButton_2} isActivated={CheckButton_2} />
+                            <div className="label">확인했어요.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="check_option">
+                    <CheckList
+                        title="끝나고 주차는 확실하게!"
+                        description="혼자만 사용하는 킥보드가 아닙니다. 다른 이용자를 위해 정해진 위치에 주차를 해주세요."
+                    />
+                    <div className="btn_container">
+                        <div className="btn_box">
+                            <CircleButton handleClick={handleCheckButton_3} isActivated={CheckButton_3} />
                             <div className="label">확인했어요.</div>
                         </div>
                     </div>
@@ -87,7 +92,7 @@ function Caution(): JSX.Element {
                     title="모든 주의사항을 확인했어요."
                     type={{ is_error: true, is_activated: false }}
                     isButtonActivated={isButtonActivated}
-                    onClick={goToHome}
+                    onClick={goBackHome}
                 />
             </div>
         </div>

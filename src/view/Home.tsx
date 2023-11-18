@@ -1,10 +1,9 @@
 // Home.tsx
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { QrScanner } from "@yudiel/react-qr-scanner";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import '../App.scss'
-import $ from "jquery";
 // Components
 import Tag from "../component/Tag";
 import Button from "../component/Button";
@@ -12,7 +11,6 @@ import Nav from '../component/Nav';
 import Caution_icon from "../images/icon_caution.svg";
 
 
-interface jquery_node { };
 interface QrResult {
     ok: boolean;
     id: number;
@@ -34,12 +32,12 @@ function Home(): JSX.Element {
     }
     function start_riding(): void {
         //주의사항에 체크하지 않았을 경우 오류 메시지 띄운 후 return.
-        if (is_checked_agree() == false) {
+        if (is_checked_agree() === false) {
             window.alert("안전한 주행을 위해 주의사항을 확인하세요.");
             return;
         }
         //서버에 데이터 전송 후 잠금 해제에 성공하였을 경우 주행 창으로 이동.
-        if (unlock_kickboard() == true) {
+        if (unlock_kickboard() === true) {
             window.alert("잠금이 해제되었습니다. 안전한 주행 되세요!");
             window.location.href = '/Riding';
         }
@@ -55,7 +53,7 @@ function Home(): JSX.Element {
 
         let initialY: number = 0;
         console.log(event.touches)
-        if (event.touches == undefined) { initialY = event.clientY; }
+        if (event.touches === undefined) { initialY = event.clientY; }
         else initialY = event.touches[0].clientY;
 
         const handleMouseMove = (e: any) => {

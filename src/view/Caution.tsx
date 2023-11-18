@@ -6,10 +6,13 @@ import '../App.scss';
 import Nav from '../component/Nav';
 import Button from '../component/Button';
 import CheckList from '../component/CheckList';
-import Tag from '../component/Tag'
 import CircleButton from '../component/CircleButton';
+import Tag from '../component/Tag'
 // Images
 import Caution_icon from '../images/icon_caution.svg';
+import NoParking_icon from '../images/no_parking.png';
+import Helmet_icon from '../images/img_helmet.png';
+import one_person_icon from '../images/one_person_icon.png';
 
 function Caution(): JSX.Element {
     const navigate = useNavigate();
@@ -55,7 +58,8 @@ function Caution(): JSX.Element {
                     {/* CheckList 1 */}
                     <CheckList
                         title="킥보드는 혼자서!"
-                        description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
+                        description="킥세이프의 승차정원은 1명 입니다. 2명 이상의 탑승시 사고위험이 있고 고장의 원인이 됩니다."
+                        img_path={one_person_icon}
                     />
                     <div className="btn_container">
                         <div className="btn_box">
@@ -68,7 +72,8 @@ function Caution(): JSX.Element {
                     {/* CheckList 2 */}
                     <CheckList
                         title="헬멧은 필수!"
-                        description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
+                        description="킥세이프는 헬멧 착용을 인식합니다. 안전한 주행을 위해 알맞게 헬멧을 착용해주세요. "
+                        img_path={Helmet_icon}
                     />
                     <div className="btn_container">
                         <div className="btn_box">
@@ -82,7 +87,8 @@ function Caution(): JSX.Element {
                     {/* CheckList 3 */}
                     <CheckList
                         title="끝나고 주차는 확실하게!"
-                        description="혼자만 사용하는 킥보드가 아닙니다. 다른 이용자를 위해 정해진 위치에 주차를 해주세요."
+                        description="이후 이용하는 사용자를 위해 지정된 위치에 주차를 해주세요."
+                        img_path={NoParking_icon}
                     />
                     <div className="btn_container">
                         <div className="btn_box">

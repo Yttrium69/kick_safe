@@ -1,6 +1,7 @@
 // Nav.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Icon_X from '../images/icon_x.svg';
 import logo from "../images/LOGO.svg";
 import logo_title from "../images/Union.svg";
 import '../App.scss';
@@ -15,6 +16,7 @@ interface NavProps {
 
 function Nav({ nav_props }: NavProps): JSX.Element {
     const navigate = useNavigate();
+    // Chage styles
     let x_styles: object;
     let title_styles: object;
     let logo_styles: object;
@@ -36,7 +38,7 @@ function Nav({ nav_props }: NavProps): JSX.Element {
                 <img src={logo} alt="" />
                 <img className="logo_title" src={logo_title} alt="" />
             </div>
-            <div style={x_styles} className="icon_container"><img src={"img/icon_x.svg"} alt="Click here to close this window." onClick={() => { navigate("/") }} /></div>
+            <div style={x_styles} className="icon_container"><img src={Icon_X} alt="Click here to close this window." onClick={() => { navigate("/") }} /></div>
         </div>
     );
 }

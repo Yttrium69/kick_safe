@@ -6,6 +6,7 @@ import Button from '../component/Button';
 import CheckList from '../component/CheckList';
 import Tag from '../component/Tag'
 import CircleButton from '../component/CircleButton';
+import Caution_icon from '../images/icon_caution.svg';
 import { useNavigate } from 'react-router-dom';
 
 function Caution(): JSX.Element {
@@ -47,7 +48,7 @@ function Caution(): JSX.Element {
             <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, show_logo: false}} /></div>
             {/* Body */}
             <div className="body_container">
-                <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
+                <Tag img_src={Caution_icon} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                 <div className="check_option">
                     {/* CheckList 1 */}
                     <CheckList
@@ -76,7 +77,7 @@ function Caution(): JSX.Element {
                 </div>
 
                 <div className="check_option">
-                    {/* CheckList 2 */}
+                    {/* CheckList 3 */}
                     <CheckList
                         title="끝나고 주차는 확실하게!"
                         description="혼자만 사용하는 킥보드가 아닙니다. 다른 이용자를 위해 정해진 위치에 주차를 해주세요."

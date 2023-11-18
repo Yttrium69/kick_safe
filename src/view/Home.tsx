@@ -1,12 +1,13 @@
 // Home.tsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { QrScanner } from "@yudiel/react-qr-scanner";
-import Tag from "../component/Tag";
-import '../App.scss'
-import Nav from '../component/Nav';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import Tag from "../component/Tag";
 import Button from "../component/Button";
+import Nav from '../component/Nav';
+import Caution_icon from "../images/icon_caution.svg";
+import '../App.scss'
 import $ from "jquery";
 
 interface jquery_node { };
@@ -132,7 +133,7 @@ function Home(): JSX.Element {
                 </div>
                 <div style={{ height: `${agree_height}px` }} className="sect_content">
                     <div className="tag_container">
-                        <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
+                        <Tag img_src={Caution_icon} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                     </div>
                     <div className="disrpt">안전한 주행을 위한 주의사항을 확인하세요.</div>
                     <div className="sect_btn">

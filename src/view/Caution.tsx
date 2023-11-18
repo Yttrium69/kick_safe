@@ -49,6 +49,7 @@ function Caution(): JSX.Element {
             <div className="body_container">
                 <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                 <div className="check_option">
+                    {/* CheckList 1 */}
                     <CheckList
                         title="킥보드는 혼자서!"
                         description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
@@ -60,8 +61,8 @@ function Caution(): JSX.Element {
                         </div>
                     </div>
                 </div>
-
                 <div className="check_option">
+                    {/* CheckList 2 */}
                     <CheckList
                         title="헬멧은 필수!"
                         description="킥세이프는 사용자의 헬멧 착용 여부를 자동으로 감지해요. 헬멧을 알맞게 착용한 사용자만이 킥보드 주행이 가능해요."
@@ -75,6 +76,7 @@ function Caution(): JSX.Element {
                 </div>
 
                 <div className="check_option">
+                    {/* CheckList 2 */}
                     <CheckList
                         title="끝나고 주차는 확실하게!"
                         description="혼자만 사용하는 킥보드가 아닙니다. 다른 이용자를 위해 정해진 위치에 주차를 해주세요."

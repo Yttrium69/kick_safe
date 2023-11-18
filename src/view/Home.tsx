@@ -94,11 +94,16 @@ function Home(): JSX.Element {
         }
     };
 
-    const handle_QR_function = (target:string) => {};
+    const handle_QR_function = (target:string) => {
+        if (buttonState === true) {
+            on_QR_successed(target);
+        }
+        else {
+            window.alert("주의사항을 확인해주세요.");
+        }
+    };
 
-    const [QR_state, set_QR_state] = useState(false);
-    
-    function on_QR_successed(target:string) {if(JSON.parse(target).ok == true){move_page('/Caution')};
+    function on_QR_successed(target:string) {if(JSON.parse(target).ok == true){move_page('/Riding')}};
 
 
     //{ok:true, id:1920}
@@ -123,7 +128,7 @@ function Home(): JSX.Element {
                 <div className="video_container">
 
                     <QrScanner containerStyle={{ width: "100%", height: "100%" }}
-                        videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={(error) => { alert("킥보드의 QR코드를 바르게 스캔해 주세요.") }}
+                        videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={(error) => {}}
                         onDecode={(target:string)=>{ handle_QR_function(target)}}
                     ></QrScanner>
 
@@ -155,6 +160,6 @@ function Home(): JSX.Element {
             </div>
         </div>
     );
-}}
+}
 
 export default Home;

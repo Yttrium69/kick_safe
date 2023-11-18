@@ -41,7 +41,7 @@ function Caution(): JSX.Element {
                 buttonState: isButtonActivated,
             },
         });
-        console.log(isButtonActivated);
+        // console.log(isButtonActivated);
     }
 
     return (

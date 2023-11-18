@@ -5,18 +5,16 @@ import Tag from "../component/Tag";
 import '../App.scss'
 import Nav from '../component/Nav';
 import { useNavigate } from "react-router-dom";
-import $ from "jquery";
 import { useLocation } from 'react-router-dom';
+import $ from "jquery";
 import Button from "../component/Button";
-// import Modal from 'react-modal';
-
 
 interface jquery_node { };
 
 function Home(): JSX.Element {
     const location = useLocation();
     const buttonState = location.state?.buttonState; // Optional chaining to handle potential undefined
-    const isButtonActivated = buttonState !== undefined ? Boolean(buttonState) : false;
+    // const isButtonActivated = buttonState !== undefined ? Boolean(buttonState) : false;
 
     function is_checked_agree(): boolean {
         // 주의사항 2가지 check 되어있을 경우 True return, 아닐 경우 False return.
@@ -86,22 +84,25 @@ function Home(): JSX.Element {
     }, [agree_height]);
 
     const handleCautionButtonClick = () => {
-        // if (buttonState === true) {
-        //     window.location.href = "/Riding";
-        // }
+        console.log(buttonState);
+        if (buttonState != true) {
+            window.location.href = "/Caution";
+        }
     };
 
-    const handle_QR_function = (target:string)=>{};
+    const handle_QR_function = (target:string) => {};
 
-    function on_QR_successed(target:string){};
-
+    const [QR_state, set_QR_state] = useState(false);
+    
+    function on_QR_successed(target:string) {};
 
     return (
         <div className="page_home">
             <div className='nav_container'>
                 <Nav nav_props={{ title: "킥세이프", show_x: false }} />
             </div>
-            <div className="black_cover hide"></div>
+            <div className={`black_cover ${buttonState ? 'hide' : ''}`}></div>
+
             <div className="sect_QR">
                 <svg className="QR_foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M375 0H0V812H375V0ZM260 194H116V338H260V194Z"

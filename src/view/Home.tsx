@@ -13,6 +13,10 @@ import Caution_icon from "../images/icon_caution.svg";
 
 
 interface jquery_node { };
+interface QrResult {
+    ok: boolean;
+    id: number;
+}
 
 function Home(): JSX.Element {
     const location = useLocation();
@@ -91,20 +95,21 @@ function Home(): JSX.Element {
         }
     };
 
-    const handle_QR_function = (target:string) => {
-        if (buttonState === true) {
-            on_QR_successed(target);
-        }
-        else {
-            window.alert("주의사항을 확인해주세요.");
-        }
-    };
-
-    function on_QR_successed(target:string) {
-        if(JSON.parse(target).ok == true) {
-            move_page('/Riding')
-        }
-    };
+    const handle_QR_function = (target: string) => {
+            if (buttonState === true) {
+                on_QR_successed(target);
+            } 
+            else {
+                window.alert("주의사항을 확인해주세요.");
+            }
+      };
+      
+      const on_QR_successed = (target: string) => {
+        const parsedTarget: QrResult = JSON.parse(target);
+            if (parsedTarget.ok === true) {
+                move_page('/Riding');
+            }
+      };
 
 
     //{ok:true, id:1920}
@@ -129,8 +134,9 @@ function Home(): JSX.Element {
                 <div className="video_container">
 
                     <QrScanner containerStyle={{ width: "100%", height: "100%" }}
-                        videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={(error) => {}}
-                        onDecode={(target:string)=>{ handle_QR_function(target)}}
+                        videoStyle={{ minWidth: "100%", minHeight: "100%" }} 
+                        onError={(error) => {}}
+                        onDecode={(target:string) => {handle_QR_function(target)}}
                     ></QrScanner>
 
                 </div >

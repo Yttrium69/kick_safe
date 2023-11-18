@@ -98,7 +98,10 @@ function Home(): JSX.Element {
 
     const [QR_state, set_QR_state] = useState(false);
     
-    function on_QR_successed(target:string) {};
+    function on_QR_successed(target:string) {if(JSON.parse(target).ok == true){move_page('/Caution')};
+
+
+    //{ok:true, id:1920}
 
 
     return (
@@ -120,8 +123,8 @@ function Home(): JSX.Element {
                 <div className="video_container">
 
                     <QrScanner containerStyle={{ width: "100%", height: "100%" }}
-                        videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={() => { console.log("nono") }}
-                        onDecode={(element)=>{handle_QR_function(element)}}
+                        videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={(error) => { alert("킥보드의 QR코드를 바르게 스캔해 주세요.") }}
+                        onDecode={(target:string)=>{ handle_QR_function(target)}}
                     ></QrScanner>
 
                 </div >
@@ -152,6 +155,6 @@ function Home(): JSX.Element {
             </div>
         </div>
     );
-}
+}}
 
 export default Home;

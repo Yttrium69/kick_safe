@@ -23,7 +23,7 @@ function Caution(): JSX.Element {
     const [CheckButton_1, setCheckButton_1] = useState(false);
     const [CheckButton_2, setCheckButton_2] = useState(false);
     const [CheckButton_3, setCheckButton_3] = useState(false);
-    const [CheckButton_4, setCheckButton_4] = useState(false);
+    // const [CheckButton_4, setCheckButton_4] = useState(false);
 
     // Change button state
     const handleCheckButton_1 = () => {
@@ -35,13 +35,13 @@ function Caution(): JSX.Element {
     const handleCheckButton_3 = () => {
         setCheckButton_3(!CheckButton_3);
     };
-    const handleCheckButton_4 = () => {
-        setCheckButton_4(!CheckButton_4);
-    };
+    // const handleCheckButton_4 = () => {
+    //     setCheckButton_4(!CheckButton_4);
+    // };
 
     React.useEffect(() => {
-        setIsButtonActivated(CheckButton_1 && CheckButton_2 && CheckButton_3 && CheckButton_4);
-    }, [CheckButton_1, CheckButton_2, CheckButton_3, CheckButton_4]);
+        setIsButtonActivated(CheckButton_1 && CheckButton_2 && CheckButton_3);
+    }, [CheckButton_1, CheckButton_2, CheckButton_3]);
 
     // If click icon_x -> move to "/"
     const goBackHome = () => {
@@ -104,7 +104,7 @@ function Caution(): JSX.Element {
                 </div> */}
 
                 <div className="check_option">
-                    {/* CheckList 4 */}
+                    {/* CheckList 3 */}
                     <CheckList
                         title="비오는 날에는 천천히~"
                         description="비가 오는 날에는 안전을 위해 최대 속도가 평소보다 감소되어 운행됩니다."
@@ -112,7 +112,7 @@ function Caution(): JSX.Element {
                     />
                     <div className="btn_container">
                         <div className="btn_box">
-                            <CircleButton handleClick={handleCheckButton_4} isActivated={CheckButton_4} />
+                            <CircleButton handleClick={handleCheckButton_3} isActivated={CheckButton_3} />
                             <div className="label">확인했어요.</div>
                         </div>
                     </div>

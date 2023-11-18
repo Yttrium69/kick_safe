@@ -29,7 +29,6 @@ function Home(): JSX.Element {
         return true;
     }
     function start_riding(): void {
-        console.log()
         //주의사항에 체크하지 않았을 경우 오류 메시지 띄운 후 return.
         if (is_checked_agree() == false) {
             window.alert("안전한 주행을 위해 주의사항을 확인하세요.");
@@ -101,7 +100,11 @@ function Home(): JSX.Element {
         }
     };
 
-    function on_QR_successed(target:string) {if(JSON.parse(target).ok == true){console.log("eeee"); move_page('/Riding')}};
+    function on_QR_successed(target:string) {
+        if(JSON.parse(target).ok == true) {
+            move_page('/Riding')
+        }
+    };
 
 
     //{ok:true, id:1920}

@@ -203,9 +203,12 @@ html {
       }
       100% {
         transform: translate(0, 0.1rem);
-        transform: translateY(25rem);
+        transform: translateY(20rem);
         opacity: 0;
       }
+    }
+    .hide{
+      display: none;
     }
   }
 

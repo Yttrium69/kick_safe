@@ -1,7 +1,11 @@
-import React from "react";
-import Snowflake from "./Snowflake";
+// FallingSnow.tsx
 
-const FallingSnow: React.FC = () => {
+import React, { HTMLAttributes } from 'react';
+import Snowflake from './Snowflake';
+
+interface FallingSnowProps extends HTMLAttributes<HTMLDivElement> {}
+
+const FallingSnow: React.FC<FallingSnowProps> = ({ className, ...rest }) => {
   const makeSnowFlakes = () => {
     let animationDelay = "0s";
     let fontSize = "1rem";
@@ -19,7 +23,7 @@ const FallingSnow: React.FC = () => {
   };
 
   return (
-    <div className="snow-container">
+    <div className={`snow-container ${className}`} {...rest}>
       {makeSnowFlakes()}
     </div>
   );

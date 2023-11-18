@@ -20,7 +20,7 @@ interface QrResult {
 function Home(): JSX.Element {
     const location = useLocation();
     const buttonState = location.state?.buttonState; // Optional chaining to handle potential undefined
-    // const isButtonActivated = buttonState !== undefined ? Boolean(buttonState) : false;
+    const [BottomMoving, isBottomMoving] = useState(false);
 
     function is_checked_agree(): boolean {
         // 주의사항 2가지 check 되어있을 경우 True return, 아닐 경우 False return.
@@ -68,9 +68,11 @@ function Home(): JSX.Element {
                 }
                 if (new_height < 120) {
                     set_agree_height(120);
+                    isBottomMoving(false);
                 }
                 else {
                     set_agree_height(new_height);
+                    isBottomMoving(true);
                 }
             }
         };
@@ -114,7 +116,7 @@ function Home(): JSX.Element {
         <div className="page_home">
             {/* Navigation */}
             <div className='nav_container'>
-                <FallingSnow />
+                <FallingSnow className={`${BottomMoving ? 'hide' : ''}`}/>
                 <Nav nav_props={{ title: "킥세이프", show_x: false, show_logo: true}} />
             </div>
             {/* Body */}

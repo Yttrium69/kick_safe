@@ -1,7 +1,5 @@
 // CircleButton.tsx
 import React, { useState } from 'react';
-import iconChecked from '../images/icon_checked.svg';
-import iconNotChecked from '../images/icon_not_checked.svg';
 import { relative } from 'path';
 
 interface CircleButtonProps {

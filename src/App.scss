@@ -196,9 +196,10 @@ html {
 
   .sect_QR {
     .video_container {
-      // svg {
-      //   display: none;
-      // }
+      svg {
+        // display: none;
+        opacity: 0;
+      }
 
       position: absolute;
       top: 0;

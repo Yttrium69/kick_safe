@@ -181,10 +181,38 @@ html {
 .page_home {
   padding-top: 0;
   position: relative;
+  .nav_container {
+    .snow-container{
+      display: flex;
+      justify-content: space-between;
+    }
+    .snow-flake {
+      font-size: 10rem;
+      color: #EFF2F4;
+      animation: fall 3.5s linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        opacity: 0;
+      }
+      3% {
+        opacity: 0.9;
+      }
+      90% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translate(0, 2rem);
+        transform: translateY(20rem);
+        opacity: 0;
+      }
+    }
+  }
 
   .hide{
     display: none;
   }
+
   .black_cover{
     width: 100vw;
     height: 100vh;
@@ -538,27 +566,27 @@ Caution Page
 }
 
 
-// .comp_btn{
-//   position: fixed;
-//   height: 5rem;
-//   padding: 0.5rem $page_padding 0 $page_padding;
-//   box-sizing: border-box;
-//   background-color: white;
-//   left: 0;
-//   bottom: 0;
-//   width: 100vw;
-
-//   button {
-//     position: relative;
-//     @include btn_filled($font_gray, "fill");
-
-//     &.pressed {
-//       @include btn_filled($yellow);
-//       @include font_bold($black);
-//     }
+// .snow-container{
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .snow-flake {
+//   font-size: 20px;
+//   color: #EFF2F4;
+//   animation: fall 3.5s linear infinite;
+// }
+// @keyframes fall {
+//   0% {
+//     opacity: 0;
 //   }
-
-//   .btn_txt {
-//     @include font_bold(#949BA4);
+//   3% {
+//     opacity: 0.9;
+//   }
+//   90% {
+//     opacity: 0.9;
+//   }
+//   100% {
+//     transform: translate(0, 1rem);
+//     opacity: 0;
 //   }
 // }

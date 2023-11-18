@@ -10,6 +10,7 @@ import Button from "../component/Button";
 import Nav from '../component/Nav';
 import Caution_icon from "../images/icon_caution.svg";
 
+import Snowflake from '../component/Snowflake';
 
 interface QrResult {
     ok: boolean;
@@ -117,6 +118,8 @@ function Home(): JSX.Element {
         <div className="page_home">
             {/* Navigation */}
             <div className='nav_container'>
+                <Snowflake />
+
                 <Nav nav_props={{ title: "킥세이프", show_x: false, show_logo: true}} />
             </div>
             {/* Body */}

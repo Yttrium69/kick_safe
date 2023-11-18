@@ -21,8 +21,8 @@ function Nav({ nav_props }: NavProps): JSX.Element {
     let title_styles: object;
     let logo_styles: object;
     
-    nav_props.show_x == true ? x_styles = {} : x_styles = { display: "none"};
-    if (nav_props.show_logo == true) {
+    nav_props.show_x === true ? x_styles = {} : x_styles = { display: "none"};
+    if (nav_props.show_logo === true) {
         title_styles = { display: "none"};
         logo_styles = {};
     }

@@ -190,6 +190,8 @@ html {
     height: 100vh;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.85);
+    top: 0;
+    left: 0;
   }
 
   .sect_QR {
@@ -206,12 +208,20 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: start;
+      height: 10rem;
+      margin-top: -3rem;
+      video{
+        margin: 0;
+        height: 0;
+        border: 10px soild red;
+      }
     }
 
     .QR_foreground {
       position: fixed;
       top: 0;
       z-index: -1;
+      // margin-top: -5rem;
     }
 
     .texts_container {
@@ -240,7 +250,7 @@ html {
     bottom: 0;
     left: 0;
     height: fit-content;
-    $controller_size: 1.5rem;
+    $controller_size: 3rem;
     width: 100vw;
     z-index: 100;
 
@@ -305,6 +315,8 @@ Caution Page
 */
 .page_caution {
   text-align: center;
+  height: 100vh;
+  overflow-y: scroll;
 
   
   .body_container {
@@ -315,19 +327,27 @@ Caution Page
     width: 100%;
     padding: 0 $page_padding 0 $page_padding;
     box-sizing: border-box;
+    // overflow-y: scroll;
+    height: 50rem;
+    // height: fit-content;
 
     .comp_tag {  
       margin: auto;
       margin-top: 1.5rem;
+      margin-bottom: 0;
     }
 
     .check_option {
       display: flex;
       flex-shrink: 1;
-      flex-grow: 1;
+      flex-grow: 0;
       flex-direction: column;
       align-items: flex-end;
       gap: 0.8rem;
+      height: fit-content;
+      top: 0;
+      margin-top: 0;
+      
 
   
       .check_list_container {
@@ -341,9 +361,12 @@ Caution Page
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+
   
         border-radius: 0.3125rem;
         background: $skyblue;
+
+        flex-grow: 0;
   
         .top {
           display: flex;
@@ -487,6 +510,7 @@ Caution Page
   line-height: 3rem;
   top: 0;
   left: 0;
+  z-index: 1000;
 
   .icon_container{
     position: absolute;

@@ -28,6 +28,7 @@ function Home(): JSX.Element {
         return true;
     }
     function start_riding(): void {
+        console.log()
         //주의사항에 체크하지 않았을 경우 오류 메시지 띄운 후 return.
         if (is_checked_agree() == false) {
             window.alert("안전한 주행을 위해 주의사항을 확인하세요.");
@@ -91,12 +92,17 @@ function Home(): JSX.Element {
         // }
     };
 
+    const handle_QR_function = (target:string)=>{};
+
+    function on_QR_successed(target:string){};
+
 
     return (
         <div className="page_home">
             <div className='nav_container'>
                 <Nav nav_props={{ title: "킥세이프", show_x: false }} />
             </div>
+            <div className="black_cover hide"></div>
             <div className="sect_QR">
                 <svg className="QR_foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M375 0H0V812H375V0ZM260 194H116V338H260V194Z"
@@ -109,7 +115,7 @@ function Home(): JSX.Element {
 
                     <QrScanner containerStyle={{ width: "100%", height: "100%" }}
                         videoStyle={{ minWidth: "100%", minHeight: "100%" }} onError={() => { console.log("nono") }}
-                        onDecode={start_riding}
+                        onDecode={(element)=>{handle_QR_function(element)}}
                     ></QrScanner>
 
                 </div >

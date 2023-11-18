@@ -30,6 +30,8 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
 //components > fonts
 
 
+
+
 @mixin font_default($color: $black) {
   color: $color;
   font-family: Pretendard;
@@ -179,6 +181,16 @@ html {
 .page_home {
   padding-top: 0;
   position: relative;
+
+  .hide{
+    display: none;
+  }
+  .black_cover{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
 
   .sect_QR {
     .video_container {

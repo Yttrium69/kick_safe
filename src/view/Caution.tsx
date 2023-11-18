@@ -1,7 +1,6 @@
 // Caution.tsx
 import React, { useState } from 'react';
 import '../App.scss';
-// import Icon_X from '../images/icon_x.svg';
 import Nav from '../component/Nav';
 import Button from '../component/Button';
 import CheckList from '../component/CheckList';
@@ -12,19 +11,19 @@ import { useNavigate } from 'react-router-dom';
 function Caution(): JSX.Element {
     const navigate = useNavigate();
 
+    // CheckList useState
     const [isButtonActivated, setIsButtonActivated] = useState(false);
     const [CheckButton_1, setCheckButton_1] = useState(false);
     const [CheckButton_2, setCheckButton_2] = useState(false);
     const [CheckButton_3, setCheckButton_3] = useState(false);
 
+    // Change button state
     const handleCheckButton_1 = () => {
         setCheckButton_1(!CheckButton_1);
     };
-
     const handleCheckButton_2 = () => {
         setCheckButton_2(!CheckButton_2);
     };
-
     const handleCheckButton_3 = () => {
         setCheckButton_3(!CheckButton_3);
     };
@@ -33,6 +32,7 @@ function Caution(): JSX.Element {
         setIsButtonActivated(CheckButton_1 && CheckButton_2 && CheckButton_3);
     }, [CheckButton_1, CheckButton_2, CheckButton_3]);
 
+    // If click icon_x -> move to "/"
     const goBackHome = () => {
         navigate('/', {
             state: {
@@ -43,8 +43,9 @@ function Caution(): JSX.Element {
 
     return (
         <div className="page_caution">
+            {/* Header */}
             <div className="nav"><Nav nav_props={{ title: "킥세이프", show_x: true, show_logo: false}} /></div>
-
+            {/* Body */}
             <div className="body_container">
                 <Tag img_src={"img/caution.svg"} background_color="#FDEDEA" font_color="#F01111" title="주의사항"></Tag>
                 <div className="check_option">
@@ -86,7 +87,7 @@ function Caution(): JSX.Element {
                     </div>
                 </div>
             </div>
-
+            {/* Footer */}
             <div>
                 <Button
                     title="모든 주의사항을 확인했어요."

@@ -4,14 +4,9 @@ import Timer from './Timer';
 
 interface BodyProps {
     title: string;
-    timerProps: {
-        _hours: number;
-        _minutes: number;
-        seconds: number;
-    };
 }
 
-const Body: React.FC<BodyProps> = ({ title, timerProps }) => {
+const Body: React.FC<BodyProps> = ({ title }) => {
     return (
         <div className="mid_nav">
             <div className="title">{title}</div>

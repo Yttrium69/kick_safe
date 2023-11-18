@@ -95,13 +95,15 @@ function Home(): JSX.Element {
     
     function on_QR_successed(target:string) {};
 
+
     return (
         <div className="page_home">
+            {/* Navigation */}
             <div className='nav_container'>
                 <Nav nav_props={{ title: "킥세이프", show_x: false, show_logo: true}} />
             </div>
+            {/* Body */}
             <div className={`black_cover ${buttonState ? 'hide' : ''}`}></div>
-
             <div className="sect_QR">
                 <svg className="QR_foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd" d="M375 0H0V812H375V0ZM260 194H116V338H260V194Z"
@@ -120,9 +122,10 @@ function Home(): JSX.Element {
                 </div >
                 <div className='texts_container'>
                     <div className='title'>대여하기</div>
-                    <div className='dscript'>킥보드 상단의 QR코드를 스캔하여<br />간편하게 대여하세요.</div>
+                    <div className='dscript'>킥보드 상단의 QR코드를 스캔하여 <br/> 간편하게 대여하세요.</div>
                 </div>
-            </div >
+            </div>
+            {/* Footer */}
             <div className="sect_agree">
                 <div style={{ cursor: "n-resize" }} className="sect_controller" onTouchStart={handleStart} onMouseDown={handleStart}>
                     <div className="controller_line"></div>

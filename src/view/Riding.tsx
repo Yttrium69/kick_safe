@@ -4,12 +4,15 @@ import '../App.scss'
 import Nav from '../component/Nav';
 import Body from '../component/Body';
 import Button from '../component/Button';
+import { useNavigate } from "react-router-dom";
 
 const Riding: React.FC = () => {
+    const move_page = useNavigate();
+
     // Finish Riding
     const finish_riding = () => {
         window.alert("이용해 주셔서 감사합니다.");
-        window.location.href = "/";
+        move_page('/');
     }
 
     return (

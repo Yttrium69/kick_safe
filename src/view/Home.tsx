@@ -15,8 +15,6 @@ import Caution_icon from "../images/icon_caution.svg";
 interface jquery_node { };
 
 function Home(): JSX.Element {
-    const navigate = useNavigate();
-
     const location = useLocation();
     const buttonState = location.state?.buttonState; // Optional chaining to handle potential undefined
     // const isButtonActivated = buttonState !== undefined ? Boolean(buttonState) : false;
@@ -103,7 +101,7 @@ function Home(): JSX.Element {
         }
     };
 
-    function on_QR_successed(target:string) {if(JSON.parse(target).ok == true){move_page('/Riding')}};
+    function on_QR_successed(target:string) {if(JSON.parse(target).ok == true){console.log("eeee"); move_page('/Riding')}};
 
 
     //{ok:true, id:1920}

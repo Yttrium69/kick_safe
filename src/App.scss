@@ -305,6 +305,8 @@ Caution Page
 */
 .page_caution {
   text-align: center;
+  height: 100vh;
+  overflow-y: scroll;
 
   
   .body_container {
@@ -315,19 +317,27 @@ Caution Page
     width: 100%;
     padding: 0 $page_padding 0 $page_padding;
     box-sizing: border-box;
+    // overflow-y: scroll;
+    height: 50rem;
+    // height: fit-content;
 
     .comp_tag {  
       margin: auto;
       margin-top: 1.5rem;
+      margin-bottom: 0;
     }
 
     .check_option {
       display: flex;
       flex-shrink: 1;
-      flex-grow: 1;
+      flex-grow: 0;
       flex-direction: column;
       align-items: flex-end;
       gap: 0.8rem;
+      height: fit-content;
+      top: 0;
+      margin-top: 0;
+      
 
   
       .check_list_container {
@@ -341,9 +351,12 @@ Caution Page
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+
   
         border-radius: 0.3125rem;
         background: $skyblue;
+
+        flex-grow: 0;
   
         .top {
           display: flex;

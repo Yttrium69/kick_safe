@@ -3,12 +3,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { QrScanner } from "@yudiel/react-qr-scanner";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import '../App.scss'
+import $ from "jquery";
+// Components
 import Tag from "../component/Tag";
 import Button from "../component/Button";
 import Nav from '../component/Nav';
 import Caution_icon from "../images/icon_caution.svg";
-import '../App.scss'
-import $ from "jquery";
+
 
 interface jquery_node { };
 

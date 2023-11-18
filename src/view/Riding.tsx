@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.scss'
+// Components
 import Nav from '../component/Nav';
 import Body from '../component/Body';
 import Button from '../component/Button';

@@ -1,13 +1,15 @@
 // Caution.tsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../App.scss';
+// Components
 import Nav from '../component/Nav';
 import Button from '../component/Button';
 import CheckList from '../component/CheckList';
 import Tag from '../component/Tag'
 import CircleButton from '../component/CircleButton';
+// Images
 import Caution_icon from '../images/icon_caution.svg';
-import { useNavigate } from 'react-router-dom';
 
 function Caution(): JSX.Element {
     const navigate = useNavigate();

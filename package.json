@@ -18,9 +18,8 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.18.0",
     "react-script": "^2.0.5",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "sass": "^1.69.5",
-    "typescript": "^5.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -49,8 +48,11 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.27",
+    "@types/react-modal": "^3.16.3",
     "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0"
+    "gulp-sass": "^5.1.0",
+    "typescript": "^5.2.2",
+    "webpack": "^4.29.6"
   },
   "description": "2023 메이커톤",
   "main": "index.js",

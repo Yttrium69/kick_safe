@@ -1,36 +1,21 @@
-// Button.tsx
-import React, { useState } from 'react';
-import '../App.scss';
+// Caution_Button.tsx
+import React from 'react';
 
-interface btn_type {
-    is_error: boolean;
-    is_activated: boolean;
-}
-
-interface btn_props {
+interface CautionButtonProps {
     title: string;
-    type: btn_type;
+    type: { is_error: boolean; is_activated: boolean };
+    isButtonActivated: boolean;
+    onClick: () => void;
 }
 
-
-function Button({ title, type }: btn_props): JSX.Element {
-    const [isActivated, setIsActivated] = useState(type.is_activated);
-    const handleClick = () => {
-        setIsActivated(!isActivated);
-    };
-    let btn_style: object = {};
-
-    if (type.is_error == true) {
-        btn_style = { "backgroundColor": "#F01111", "color": "white" }
-    }
-
+const Caution_Button: React.FC<CautionButtonProps> = ({ title, type, isButtonActivated, onClick }) => {
     return (
         <div className="comp_btn">
-            <button style={btn_style} className={`btn_txt ${isActivated ? 'pressed' : ''}`} onClick={handleClick}>
+            <button className={`btn ${isButtonActivated ? 'pressed' : ''}`} onClick={onClick}>
                 {title}
             </button>
         </div>
     );
-}
+};
 
-export default Button;
+export default Caution_Button;

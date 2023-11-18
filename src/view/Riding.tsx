@@ -2,8 +2,7 @@ import React from 'react';
 import '../App.scss'
 import Nav from '../component/Nav';
 import Body from '../component/Body';
-import Button from '../component/Button';
-import Caution_Button from '../component/Caution_Button';
+import Caution_Button from '../component/Button';
 
 const Riding: React.FC = () => {
     // Define your timer properties

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '../App.scss';
 import Icon_X from '../images/icon_x.svg';
 import Nav from '../component/Nav';
-import Caution_Button from '../component/Caution_Button';
+import Caution_Button from '../component/Button';
 import CheckList from '../component/CheckList';
 import Tag from '../component/Tag'
 import CircleButton from '../component/CircleButton';

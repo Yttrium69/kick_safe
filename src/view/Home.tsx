@@ -7,8 +7,8 @@ import Nav from '../component/Nav';
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import { useLocation } from 'react-router-dom';
-import Caution_Button from "../component/Caution_Button";
-import Modal from 'react-modal';
+import Caution_Button from "../component/Button";
+// import Modal from 'react-modal';
 
 
 interface jquery_node { };
@@ -86,12 +86,9 @@ function Home(): JSX.Element {
     }, [agree_height]);
 
     const handleCautionButtonClick = () => {
-        if (buttonState === true) {
-            window.location.href = "/Riding";
-        }
-        else {
-            window.alert("주의사항을 확인해 주세요.");
-        }
+        // if (buttonState === true) {
+        //     window.location.href = "/Riding";
+        // }
     };
 
 
@@ -140,7 +137,7 @@ function Home(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

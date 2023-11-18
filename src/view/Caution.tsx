@@ -88,8 +88,8 @@ function Caution(): JSX.Element {
                     </div>
                 </div>
 
-                <div className="check_option">
-                    {/* CheckList 3 */}
+                {/* <div className="check_option">
+
                     <CheckList
                         title="끝나고 주차는 확실하게!"
                         description="이후 이용하는 사용자를 위해 지정된 위치에 주차를 해주세요."
@@ -101,7 +101,7 @@ function Caution(): JSX.Element {
                             <div className="label">확인했어요.</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="check_option">
                     {/* CheckList 4 */}

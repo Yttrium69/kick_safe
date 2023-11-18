@@ -10,7 +10,7 @@ import CircleButton from '../component/CircleButton';
 import Tag from '../component/Tag'
 // Images
 import Caution_icon from '../images/icon_caution.svg';
-import NoParking_icon from '../images/no_parking.png';
+// import NoParking_icon from '../images/no_parking.png';
 import Helmet_icon from '../images/img_helmet.png';
 import one_person_icon from '../images/one_person_icon.png';
 import rain_icon from '../images/rain_icon.png';

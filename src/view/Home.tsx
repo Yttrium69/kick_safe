@@ -15,6 +15,8 @@ import Caution_icon from "../images/icon_caution.svg";
 interface jquery_node { };
 
 function Home(): JSX.Element {
+    const navigate = useNavigate();
+
     const location = useLocation();
     const buttonState = location.state?.buttonState; // Optional chaining to handle potential undefined
     // const isButtonActivated = buttonState !== undefined ? Boolean(buttonState) : false;
@@ -87,8 +89,8 @@ function Home(): JSX.Element {
     }, [agree_height]);
 
     const handleCautionButtonClick = () => {
-        if (buttonState != true) {
-            window.location.href = "/Caution";
+        if (buttonState !== true) {
+            move_page("/Caution");
         }
     };
 

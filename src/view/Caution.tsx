@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '../App.scss';
 import Icon_X from '../images/icon_x.svg';
 import Nav from '../component/Nav';
-import Caution_Button from '../component/Button';
+import Button from '../component/Button';
 import CheckList from '../component/CheckList';
 import Tag from '../component/Tag'
 import CircleButton from '../component/CircleButton';
@@ -83,7 +83,7 @@ function Caution(): JSX.Element {
             </div>
 
             <div>
-                <Caution_Button
+                <Button
                     title="모든 주의사항을 확인했어요."
                     type={{ is_error: true, is_activated: false }}
                     isButtonActivated={isButtonActivated}

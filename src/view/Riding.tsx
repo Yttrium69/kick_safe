@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.scss'
 import Nav from '../component/Nav';
 import Body from '../component/Body';
-import Caution_Button from '../component/Button';
+import Button from '../component/Button';
 
 const Riding: React.FC = () => {
     // Define your timer properties
@@ -26,7 +26,7 @@ const Riding: React.FC = () => {
                 <Body title="주행중..." timerProps={timerProps} />
             </div>
             <div className="sect_btn">
-                <Caution_Button title="주행 완료" type={{ is_error: true, is_activated: false }} isButtonActivated={true}  onClick={finish_riding} />
+                <Button title="주행 완료" type={{ is_error: true, is_activated: false }} isButtonActivated={true}  onClick={finish_riding} />
             </div>
         </div>
     );

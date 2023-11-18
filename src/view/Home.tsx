@@ -7,7 +7,7 @@ import Nav from '../component/Nav';
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import { useLocation } from 'react-router-dom';
-import Caution_Button from "../component/Button";
+import Button from "../component/Button";
 // import Modal from 'react-modal';
 
 
@@ -69,7 +69,6 @@ function Home(): JSX.Element {
                     set_agree_height(new_height);
                 }
             }
-
         };
 
         const handleMouseUp = () => {
@@ -128,7 +127,7 @@ function Home(): JSX.Element {
                     </div>
                     <div className="disrpt">안전한 주행을 위한 주의사항을 확인하세요.</div>
                     <div className="sect_btn">
-                        <Caution_Button
+                        <Button
                             title="모든 주의사항을 확인했어요."
                             type={{ is_error: true, is_activated: false }}
                             isButtonActivated={buttonState}

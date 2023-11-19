@@ -181,36 +181,6 @@ html {
 .page_home {
   padding-top: 0;
   position: relative;
-  .nav_container {
-    .snow-container{
-      display: flex;
-      justify-content: space-between;
-    }
-    .snow-flake {
-      font-size: 10rem;
-      color: #EFF2F4;   
-      animation: fall 3.5s linear infinite;
-    }
-    @keyframes fall {
-      0% {
-        opacity: 0;
-      }
-      3% {
-        opacity: 0.9;
-      }
-      90% {
-        opacity: 0.9;
-      }
-      100% {
-        transform: translate(0, 0.1rem);
-        transform: translateY(20rem);
-        opacity: 0;
-      }
-    }
-    .hide{
-      display: none;
-    }
-  }
 
   .hide{
     display: none;

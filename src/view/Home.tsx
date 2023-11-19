@@ -101,9 +101,9 @@ function Home(): JSX.Element {
             if (buttonState === true) {
                 on_QR_successed(target);
             } 
-            else {
-                window.alert("주의사항을 확인해주세요.");
-            }
+            // else {
+            //     window.alert("주의사항을 확인해주세요.");
+            // }
       };
 
       const on_QR_successed = (target: string) => {
